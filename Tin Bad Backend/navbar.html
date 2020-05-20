@@ -1,0 +1,105 @@
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+	<head>
+		<title>TPG</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.1" media="screen" />
+
+		<!-- Google web fonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow"/>
+		
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery.min.js" /></script/>
+		<script src="js/custom.js"></script/>
+		<script src="js/ender.min.js"></script/>
+		<script src="js/selectnav.js"></script/>
+		<script src="js/jquery.flexslider.js"></script/>
+		<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.1"></script/>
+		<script type="text/javascript" src="js/jquery.jcarousel.min.js"/></script/>
+		<script type="text/javascript" src="js/jquery.tweet.js"/></script/>
+		<script/>
+			jQuery(document).ready(function() {
+				/* Flex Slider Call For home page 01*/
+				$('.flexslider').flexslider({
+					directionNav: false,
+					pauseOnAction: false
+				});
+				
+				/* Jcarousel Call */	
+				jQuery('#testimonials-carousel').jcarousel({
+					auto: 6,
+					wrap: 'last',
+					scroll: 1,
+					visible:1,
+					initCallback: mycarousel_initCallback
+				});
+				function mycarousel_initCallback(carousel) {
+					// Disable autoscrolling if the user clicks the prev or next button.
+					carousel.buttonNext.bind('click', function() {
+						carousel.startAuto(0);
+					});
+					carousel.buttonPrev.bind('click', function() {
+						carousel.startAuto(0);
+					});
+					// Pause autoscrolling if the user moves with the cursor over the clip.
+					carousel.clip.hover(function() {
+						carousel.stopAuto();
+					}, function() {
+						carousel.startAuto();
+					});
+				};
+			});
+		</script/>
+	</head/>
+
+
+			
+				<!-- Begin Navigation -->
+				<div class="sixteen columns"/>
+					<div id="navigation"/>
+						<ul id="nav">
+
+							<li><a id="current-menu-item" href="index.html"/>Home</a/></li/>
+							<li><a href="admins.php">Admins</a>
+								<ul>
+									<li><a href="admins.php">Admin List</a></li>
+									<li><a href="adminlogs.php">Admin Logs</a></li>
+								</ul>
+							</li>
+							<li><a href="news.php">News</a>
+								<ul>
+									<li><a href="news.php">View News</a></li>
+									<li><a href="news.php">Post News</a></li>
+								</ul>
+							</li>
+							<li><a href="member.search.php">Members</a></li>
+							<li><a href="leagues.php">Leagues</a></li>
+ 							<li><a href="suspensions.php">Suspensions</a></li>							
+ 							<li><a href="pending.approval.php">Pending</a></li>
+							
+							<li><a href="#">Links</a>	
+								<ul>						
+									<li><a href="http://support.tpgleague.org/ticket/admin.login.php">Support Tickets</a></li>
+									<li><a href="http://mail.tpgleague.org:8000/_index">Webmail</a></li>
+									<li><a href="http://www.billkamm.net/sp3c/configmaking.html">Config Making</a></li>
+
+								</ul>
+							</li>
+					
+
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+				<!-- End Navigation -->
+			</div>
+			<!-- End Container -->
+
+			
+
+</html>

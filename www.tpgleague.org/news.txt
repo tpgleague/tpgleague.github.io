@@ -1,0 +1,3 @@
+Future:
+-- users limited same as polls, plus check abuse lock
+-- display active team name and link

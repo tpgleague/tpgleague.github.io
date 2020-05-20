@@ -1,0 +1,35 @@
+body	{ }	
+
+table { }
+
+p { font: 12px sans-serif }
+
+p.header { font: 16px sans-serif; font-weight: bold }
+
+p.instructions { font: 11px sans-serif }
+
+p.required { font: 11px sans-serif; color: red }
+
+p.ticketheader { font: 10px sans-serif }
+
+p.ticketsummary { font: 11px sans-serif }
+
+ul { font: 12px sans-serif }
+
+li { font: 12px sans-serif }
+
+a.one:link { color: #FFFFFF; text-decoration: none }	
+a.one:visited { color: #FFFFFF; text-decoration: none }	
+a.one:hover { color: #FFFFFF; text-decoration: underline }
+
+a.two:link { color: #999999; text-decoration: none }	
+a.two:visited { color: #999999; text-decoration: none }	
+a.two:hover { color: #999999; text-decoration: underline }		
+
+a.mailto:link { color: #FFFFFF; text-decoration: none }	
+a.mailto:visited { color: #FFFFFF; text-decoration: none }	
+a.mailto:hover { color: #FFFFFF; text-decoration: underline }
+
+a.mailto2:link { color: #999999; text-decoration: none }	
+a.mailto2:visited { color: #999999; text-decoration: none }	
+a.mailto2:hover { color: #999999; text-decoration: underline }	

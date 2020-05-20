@@ -1,0 +1,49 @@
+Given that tradtionally TPG has followed CAL's map rotation creating configs was never really a problem.  In the TPG 3v3 league, however, we use all custom maps and generally bring on at least 6 new maps a year (including all-stars maps).  That is a lot of config making and with the flags on the HUD not corresponding to the order of the flags in the config some special steps need to be taken.
+
+[b]How to make a DOD 1.3 Config[/b]
+[u]Step 1:[/u]
+First I create a config where the allies and axis get the same points for each flag and each flag has a unique value.
+
+Five flag map example:
+[FONT=Courier New]mp_clan_scoring_values_allies "12345" 
+mp_clan_scoring_values_axis "12345"[/FONT]
+
+This will allow you to determine which flags fall at which point in the cvar string.  More on this in a second.  I have uploaded my "test" configs to my website for those that wish to see them:
+[url]http://files.tpgleague.org/making_configs/test_configs.zip[/url]
+
+[u]Step 2:[/u]
+Enter an empty server and exec the test config.  If there is more than one 2+ man cap you will need help from another person, so that you can cap the flags.
+
+I now write down on a piece paper the number for each flag the map contains.  For example on a five-flagged map I would write down on paper:
+
+[FONT=Courier New]1  2  3  4  5[/FONT]
+
+Then I make the map go live by typing "mp_clan_restartround 1" in console.  I cap one flag at a time and note the value.  You do not cap the next flag until you have the point value for the flag you just capped.  I then match up that value with the number I have written on the paper.  If I cap the allies' first flag and in a few seconds I see "The Allies have scored 3 points." then I know that I should write "allies first" under the 3 on the paper.  Since the allies are already getting 3 points for that flag you must subtract 3 from the next flag you cap.  If I cap the allies' second flag and the server returns  "The Allies have scored 5 points".  Then you know that the allies' second flag is point number 2  (5 - 3 = 2).   You now must subtract 5 (the total of the previous two) from the point value the next flag gives you.  You continue this process until you have identified all the flags on the map.
+
+[u]Step 3:[/u]
+For example let's say we found the following:
+1: axis second
+2: allies second
+3: allies first
+4: mid
+5: axis first
+
+These numbers now correspond to the numbers in your cvar string.  You can now replace these numbers with the point values you wish.  If you want 2 for the middle flag and 1 point for each enemy flag, but 0 for your own this is how you would structure the config (using the example above):
+
+[FONT=Courier New]mp_clan_scoring_values_allies "10021" 
+mp_clan_scoring_values_axis "01120"[/FONT]
+
+I then save the config under a different name.  Usuaully configs are named with the league prefix followed by an underscore and then the map name without any beta suffixes or game prefixes.   An example would be for the TPG2 league and the map being dod_somemap_b5 the config name would be tpg2_somemap.cfg
+
+[u]Step 4:[/u]
+Next, I create a  copy of my newly created config and rename it to have an _ot on the end of the filename.  The filename for the above config would be tpg2_somemap_ot.cfg.  This will be our overtime config.  In the TPG 3v3 league I include an overtime config for every map and make it known to the teams it exists.  This will avoid any confusion if a match must proceed into overtime.
+
+Once the file is copied I open up the new file and add one line under the line that begins with "exec".  That line is a new time limit (mp_timelimit).  The only difference between the regulation rounds and overtime is the time limit.  Here is an example from a 3v3 overtime config:
+
+[FONT=Courier New]exec tpgbasic3.cfg
+mp_timelimit 5[/FONT]
+
+This works because the new mp_timelimit command will override the mp_timelimit command that was executed in the tpgbasic3.cfg file.
+
+[u]Step 5:[/u]
+Test your configs in a mock or real scrim.  There is NO EXCUSE for not testing your configs.  When teams and players use an incorrect config it makes the league look really bad.  Make sure your config works properly before releasing it to the public!

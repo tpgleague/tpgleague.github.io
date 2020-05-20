@@ -1,0 +1,236 @@
+<?php
+
+/********************************************************************************************
+*                                                                                            
+* ST4NK!Ticket content management system, copyright 2005 and beyond by Digital Bluesky, LLC. 
+* Released under the BSD License,  see the LICENSE.txt file for more infomation.             
+*                                                                                            
+* Although greatly modified at this point, the origianl concepts for the basis of this       
+* code were taken from "Web Database Applications with PHP and MySQL" published by O'Reilly  
+* and Associates and authored by Hugh E. Williams and David Lane.                            
+*                                                                                            
+*/
+
+// ST4NK! Ticket Beta v0.1 - admin.helper.php
+
+session_start();
+
+// REQUIRE VALID USER FOR PAGE ACCESS
+
+require "./includes/authentication.inc.php";
+sessionAuthenticate();
+
+// REQUIRE DB ACCESS FOR THIS PAGE
+
+require "./config.php";
+require "./includes/db.inc.php";
+
+// OPEN THE DATABASE CONNECTION
+
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+
+// DETERMINE IF USER HAS RIGHTS TO ACCESS PAGE
+
+if (isset($_SESSION["loginUsername"])) {
+$admin_handle = $_SESSION["loginUsername"];
+$query = mysql_query ("SELECT * FROM st4nkticket_helpers WHERE helper_handle = '$admin_handle'");
+$row = @mysql_fetch_array($query);
+$admin_access = $row["helper_admin_level"];
+	
+if ($admin_access > 4) {
+
+// HEADER
+
+require "./templates/admin.header.tpl";
+
+// BODY
+
+print "
+
+	<table align=center bgcolor=#FFFFFF border=0 width=1000>\n
+	<tr><td colspan=3><p><i>You are logged in as {$_SESSION["loginUsername"]} </i></p></td></tr>\n
+	<form method=POST action=admin.helper_insert.php onSubmit=\"return checkPw(this)\">
+	<tr><td colspan=3><p>Enter information for a new helper.</td></tr>\n
+	<tr>
+		<td width=250><p>Admin level:</td>
+		<td width=250><select name=admin_level>
+		<option selected value=0>0
+		<option value=1>1
+		<option value=5>5
+		</td>
+		<td width=500><p class=required>1 = helper, 5 = admin</p>
+		</td>
+	</tr>\n 
+	<tr>
+		<td><p>Helper active:</td>
+		<td><select name=active>
+		<option selected value=yes>yes
+		<option value=no>no
+		</td>
+		<td>
+		</td>
+	</tr>\n										
+	<tr>
+		<td><p>Handle:</td>
+		<td><input type=text maxsize=20 name=handle size=20></td>
+		<td><p class=required>limit 20 characters</td>
+	</tr>\n
+	<tr>
+		<td><p>Password:</td>
+		<td>
+		<input type=password maxsize=10 name=password size=10>
+		</td>
+		<td><p class=required>limit 10 characters, no spaces</td>
+	</tr>\n 
+	<tr>
+		<td><p>Re-enter Password:</td>
+		<td>
+		<input type=password maxsize=10 name=password2 size=10>
+		</td>
+		<td>
+		</td>
+	</tr>\n 
+	<tr>
+		<td><p>Email:</td>
+		<td><input type=text maxsize=50 name=email size=20></td>
+		<td><p class=required></td>
+	</tr>\n
+	<tr><td colspan=3>
+		<input type=submit></form>
+		</td>
+	</tr>\n
+	<tr>
+		<td colspan=3><hr></td>
+	</tr>\n
+	</table>\n
+	";
+
+// SELECT HELPERS TO MOD OR DELETE
+ 	
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+$result = mysql_query ("SELECT * FROM st4nkticket_helpers WHERE helper_active = 'yes' ORDER BY helper_handle");
+
+print "<table align=center bgcolor=#FFFFFF border=0 width=1000>\n
+		<tr>
+		<td width=100><p><b>Name</b><p></td>
+		<td width=100><p><b>Permissions</b></p></td>
+		<td width=200><p><b>Email</b></p></td>
+		<td width=50></td>
+		<td width=50></td>
+		<td width=300></td>
+	</tr>\n";
+
+// Define your colors for the alternating rows
+
+$color1 = "#CCFFCC";
+$color2 = "#BFD8BC";
+$color_count = 0; 
+
+while ($row = mysql_fetch_array($result))
+
+	{
+  
+		$row_color = ($color_count % 2) ? $color1 : $color2;
+
+		print "<tr>";
+		print "<td bgcolor=$row_color><p> {$row["helper_handle"]}</td>\n";
+		
+		$permissions = $row["helper_admin_level"];
+		if ($permissions > 1) {
+			print "<td bgcolor=$row_color><p>Administrator</p></td>";
+		} elseif ($permissions == 1) {
+			print "<td bgcolor=$row_color><p>Helper</p></td>";
+		} else {
+			print "<td bgcolor=$row_color><p>None</p></td>";
+		}
+
+		$email = $row["helper_email"];
+
+		print "<td bgcolor=$row_color><p>$email</p></td>";
+	
+		print "<td bgcolor=$row_color><p><a class=two href=admin.helper_mod.php?helper_id={$row["helper_id"]}>Modify</a></td>\n";
+		print "<td></td>\n";
+		print "<td></td>";
+		print "</tr>\n";
+
+		$color_count++;
+
+	}
+
+print "</table>\n";
+
+// SELECT INACTIVE HELPERS TO MOD OR DELETE
+ 	
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+$result = mysql_query ("SELECT * FROM st4nkticket_helpers WHERE helper_active = 'no' ORDER BY helper_handle");
+
+print "<table align=center bgcolor=#FFFFFF border=0 width=1000>\n
+		<tr><td colspan=6>&nbsp</td></tr>
+		<tr><td colspan=6><p><b>INACTIVE</b></p></td></tr>
+
+		<tr>
+		<td width=100><p><b>Name</b><p></td>
+		<td width=100><p><b>Permissions</b></p></td>
+		<td width=200><p><b>Email</b></p></td>
+		<td width=50></td>
+		<td width=50></td>
+		<td width=300></td>
+	</tr>\n";
+
+// Define your colors for the alternating rows
+
+$color1 = "#CCFFCC";
+$color2 = "#BFD8BC";
+$color_count = 0; 
+
+while ($row = mysql_fetch_array($result))
+
+	{
+  
+		$row_color = ($color_count % 2) ? $color1 : $color2;
+
+		print "<tr>";
+		print "<td bgcolor=$row_color><p> {$row["helper_handle"]}</td>\n";
+		
+		$permissions = $row["helper_admin_level"];
+		if ($permissions > 1) {
+			print "<td bgcolor=$row_color><p>Administrator</p></td>";
+		} elseif ($permissions == 1) {
+			print "<td bgcolor=$row_color><p>Helper</p></td>";
+		} else {
+			print "<td bgcolor=$row_color><p>None</p></td>";
+		}
+
+		$email = $row["helper_email"];
+
+		print "<td bgcolor=$row_color><p>$email</p></td>";
+	
+		print "<td bgcolor=$row_color><p><a class=two href=admin.helper_mod.php?helper_id={$row["helper_id"]}>Modify</a></td>\n";
+		print "<td bgcolor=$row_color><p><a class=two href=admin.helper_delete.php?helper_id={$row["helper_id"]} onclick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>\n";
+		print "<td></td>";
+		print "</tr>\n";
+
+		$color_count++;
+
+	}
+
+print "</table>\n";
+
+// FOOTER
+
+require	"./templates/admin.footer.tpl";
+
+} else {
+
+header("Location: error_logout.php");
+
+exit;
+
+}
+
+}
+
+?>

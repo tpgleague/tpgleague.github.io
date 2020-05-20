@@ -1,0 +1,58 @@
+.rule {
+  margin: 0.5em;
+}
+
+.plus {
+  color: blue;
+  cursor: pointer;
+}
+
+.popup {
+  position: absolute;
+  display: none;
+
+  margin: 1.5em;
+  border: 3px solid black;
+  background-color: lightyellow;
+  width: 620px;
+  height: 420px;
+  padding: 2px;
+}
+
+.popup_move {
+  position: absolute;
+  display: none;
+
+  margin: 1.5em;
+  border: 3px solid black;
+  background-color: lightyellow;
+  width: 360px;
+  height: 120px;
+  padding: 2px;
+}
+
+label, input, textarea {
+  margin: 0;
+  padding: 0 1em;
+}
+
+label {
+  width: 50px;
+}
+
+.chkbox {
+  width: 16px;
+}
+
+.inactive {
+  width: auto;
+  padding: 0;
+  z-index: 100;
+  opacity:.25;
+  filter: alpha(opacity=25);
+  -moz-opacity: 0.25;
+}
+
+a.rule {
+  text-decoration: none;
+}

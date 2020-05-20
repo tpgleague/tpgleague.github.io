@@ -1,0 +1,21 @@
+.scorecol {
+  text-align: right;
+  width: 30px;
+}
+.sidecol {
+  width: 40px;
+}
+
+#report_match_table {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#report_match_table tbody {
+  margin-bottom: 2em;
+}
+
+#report_match_table th {
+  text-align: left;
+}

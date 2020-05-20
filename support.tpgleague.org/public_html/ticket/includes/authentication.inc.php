@@ -1,0 +1,100 @@
+<?php
+
+/********************************************************************************************
+*                                                                                            
+* ST4NK!Ticket content management system, copyright 2005 and beyond by Digital Bluesky, LLC. 
+* Released under the BSD License,  see the LICENSE.txt file for more infomation.             
+*                                                                                            
+* Although greatly modified at this point, the origianl concepts for the basis of this       
+* code were taken from "Web Database Applications with PHP and MySQL" published by O'Reilly  
+* and Associates and authored by Hugh E. Williams and David Lane.                            
+*                                                                                            
+*/
+
+// ST4NK! Ticket Beta v0.1 - authentication.inc.php
+
+// FUNCTION TO DETERMINE WHETHER OR NOT A USER IS VALID AND SHOULD BE ELIGIBLE FOR PRIVILEGED ACCESS
+
+function authenticateUser($connection, $username, $password)
+
+{
+  
+	// TEST THE USERNAME AND PASSWORD PARAMETERS
+ 
+		if (!isset($username) || !isset($password)) return false;
+
+	// CREATE A DIGEST OF THE PASSWORD COLLECTED FROM THE CHALLENGE
+  
+		$password_digest = md5(trim($password));
+
+	// SQL QUERY TO FIND THE USER
+ 
+		$query = "SELECT helper_id, helper_password FROM st4nkticket_helpers WHERE helper_handle = '{$username}' AND helper_password = '{$password_digest}'";
+
+	// EXECUTE THE QUERY
+
+		if (!$result = @ mysql_query ($query, $connection)) showerror();
+
+	// EXACTLY ONE ROW? THEN WE HAVE A WINNER
+ 
+		if (mysql_num_rows($result) != 1) return false;
+
+	// security - initalize $active = 0 before checking to see if account has been activated
+
+		$active = 0;
+
+	// has the account been activated?
+
+		$query2 = mysql_query ("SELECT helper_active FROM st4nkticket_helpers WHERE helper_handle = '{$username}'");
+		$row2 = mysql_fetch_array($query2);
+		$active = $row2["helper_active"];
+
+		if ($active != 'yes') return false;
+
+		else return true;
+
+}
+
+// CONNECTS TO A SESSION AND CHECKS THAT THE USER HAS AUTHENTICATED AND THAT THE REMOTE IP ADDRESS MATCHES
+// THE ADDRESS USED TO CREATE THE SESSION.
+
+function sessionAuthenticate()
+
+{
+  
+	// CHECK IF THE USER HAS LOGGED IN
+ 
+	if (!isset($_SESSION["loginUsername"]))
+  
+	{
+    
+		// THE REQUEST DOES NOT IDENTIFY A SESSION
+ 
+		$_SESSION["message"] = "You are not authorized to access the URL {$_SERVER["REQUEST_URI"]}";
+
+		header("Location: error_logout.php");
+
+		exit;
+
+	}
+
+	// CHECK IF THE REQUEST IS FROM A DIFFERENT IP ADDRESS
+ 
+	if (!isset($_SESSION["loginIP"]) || ($_SESSION["loginIP"] != $_SERVER["REMOTE_ADDR"]))
+
+	{
+
+		// THE REQUEST DID NOT ORIGINATE FROM THE MACHINE THAT WAS USED TO CREATE A SESSION.
+		// THIS IS POSSIBLY A SESSION HIJACK ATTEMPT
+
+		$_SESSION["message"] = "You are not authorized to access the URL {$_SERVER["REQUEST_URI"]} from address {$_SERVER["REMOTE_ADDR"]}";
+
+		header("Location: error_logout.php");
+    
+		exit;
+
+	}
+	
+}
+
+?>

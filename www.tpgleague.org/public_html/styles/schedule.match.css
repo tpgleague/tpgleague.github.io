@@ -1,0 +1,117 @@
+#schedule_proposals {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.prop {
+  margin-bottom: 2em;
+}
+
+.status_Pending {
+  font-weight: bold;
+  color: red;
+}
+
+.status_Message {
+  font-weight: bold;
+}
+
+.status_Accepted {
+  font-weight: bold;
+  color: green;
+}
+
+.status_Declined {
+
+}
+
+div.comments_box {background: gray}
+div.comments_text {background: white}
+div.comments_box {padding: 0.5em}
+div.comments_text {margin: -2em 0 0 -2em}
+div.comments_box {margin: 3em 0 2em 4em}
+div.comments_text {border: thin solid #c60; padding: 0.5em}
+
+div.review_box {
+  width: auto;
+  padding: 1em;
+  margin: 1em;
+  border: 1px outset black;
+}
+
+input.review_button {
+  border-width: 2px; border-style: outset;
+}
+
+p.error {
+  background-image: url(/images/icon_error.gif);
+  background-position: top center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: black;
+  margin: 5px 15px;
+  border: 2px black outset;
+  font-weight: bold;
+  padding: 20px 20px 5px;
+}
+
+
+div.error p.error {
+  background-image: none;
+  border-style: none;
+  font-weight: bold;
+  margin: -5px 0px 5px 118px;
+  width: auto;
+  color: #ff0000;
+}
+
+div.popup {
+    border: 3px solid black;
+    background-color: lightyellow;
+    width: 220px;
+    height: 160px;
+    padding: 2px;
+    position:absolute;
+    display:none;
+    text-align: left;
+}
+
+div.popup_close {
+    text-align: left;
+}
+
+div.date {
+ position:absolute;
+ display:none
+}
+
+.subbtn {
+    width: 100px;
+    margin-top: 2px;
+}
+
+.plus, .qm {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.qm {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+
+.close {
+    color: blue;
+    cursor: pointer;
+}
+.pop_er {
+    color: red;
+}
+
+.popup input {
+    width: 100px;
+}

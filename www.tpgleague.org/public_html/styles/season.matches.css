@@ -1,0 +1,9 @@
+table#matchlist {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table#matchlist th {
+  text-align: left;
+}

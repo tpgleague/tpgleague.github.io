@@ -1,0 +1,3 @@
+{$dispute.did}
+
+{$dispute.mid}

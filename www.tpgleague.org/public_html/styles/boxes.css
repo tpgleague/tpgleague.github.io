@@ -1,0 +1,24 @@
+h1.rubberhdr {
+   height: 20px;
+   margin: 0em 0 0.5em;
+   padding: 0 10px 0 0;
+   background: url("/images/right-semi.gif") top right no-repeat;
+   font: bold 12px/1 sans-serif;
+}
+
+h1.rubberhdr span {
+   display:block;
+   height:20px;
+   margin: 0;
+   padding: 4px 0 0 10px;
+   background: url("/images/left-semi.gif") top left no-repeat;
+   color: #eee;
+   text-align:center;
+   white-space: nowrap;
+   font-variant: small-caps;
+   font-weight: bold;
+}
+
+div.rubberbox {
+  margin-bottom: 2.0em;
+}

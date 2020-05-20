@@ -1,0 +1,43 @@
+require_once '../includes/inc.initialization.php';  (all)
+
+    require_once '../includes/inc.initialization.display.php'; (auto-scheduler, edit.match, edit.matches, edit.rules, edit.schedule, edit.team, edit.user, pending-approval, teams-manager)
+        $cssAppend, $jsAppend, $extra_head, team awaiting approval count, and calls displayHeader() which is in inc.func-include.php
+        
+    require_once '../includes/inc.initialization.support.php'; (edit.rules, edit.team, edit.user, pending-approval, teams-manager)
+        require_once 'inc.config.php';
+            COOKIE_DOMAIN_NAME, PHYSICAL_SITE, and DB connection information
+        require_once 'Smarty.class.php'; (in ../common_includes/Smarty/)
+        require_once 'PEAR.php'; (in ../common_includes/pear/)
+        require_once 'DB.php'; (in ../common_includes/pear/)
+        require_once 'inc.quickform.php';  -- appears to be used with a quick form functionality
+        require_once 'inc.cls-updateRecord.php';
+            classes InsertRecord and UpdateRecord.  Write to table admins_action_log
+        require_once 'inc.func-include.php';
+            various date related functions, display related functions, checks, and getListings($lid) which gets a list of groups, divisions, etc...
+        require_once 'inc.func-common.includes.php'; (in ../common_includes/)
+            getPrivilegedMembers($tid), sending email, and date array to string functions
+        require_once 'inc.parameter-defines.php';  -- empty
+        require_once 'inc.login.php';
+            login and logout functions
+            require_once 'inc.func-hash-password.php'; (in ../common_includes/)
+            require_once "Text/Password.php";
+        require_once 'inc.admin-permissions.php';
+            checks admin permissions, defines SUPERADMIN
+        require_once 'inc.func-schedule.php'; (in ../common_includes/); (manually included in auto-scheduler, edit.match, and edit.matches)
+            scheduleTeams($sch_id, $tid1, $tid2=NULL, $court='auto', $win_tid=NULL, $forfeit=0, $notify=1)
+        require_once 'inc.func-checkTeamRosterLock.php'; (in ../common_includes/)
+            checkTeamRosterLock ($tid)
+        
+
+require_once 'inc.func-updateStandings.php'; (edit.match, edit.matches, edit.season, edit.team, teams-manager)
+    updates the standings after a change
+    
+require_once 'inc.func-schedule.php'; (auto-scheduler, edit.match, edit.matches)
+    scheduleTeams($sch_id, $tid1, $tid2=NULL, $court='auto', $win_tid=NULL, $forfeit=0, $notify=1)
+
+require_once 'inc.cls-gid.php'; (in ../common_includes/); (edit.team, edit.user)
+    Used for creating Steam IDs
+    
+require_once 'Calendar/Month/Weekdays.php'; pear; (edit.schedule, season.calendar)
+require_once 'Date/Holidays.php'; pear; (edit.schedule, season.calendar)
+include_once 'GoogleMapAPI.class.php'; (edit.user)

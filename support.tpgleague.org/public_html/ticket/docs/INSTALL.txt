@@ -1,0 +1,45 @@
+ST4NK! Ticket
+Copyright (c) 2005, Digital Bluesky, LLC
+Released under the BSD License, see the LICENSE.txt file for more information
+
+INTRODUCTION
+
+ST4NK! Ticket is a simple support ticket system that uses the PHP scripting language and the MYSQL database server.
+It has been developed and tested under Windows XP using EasyPHP version 1.8 and under FreeBSD version 5.3 using Apache 1.3.33,
+PHP 4.3.10 and MYSQL 3.23.58.  ST4NK! Ticket should work in a Microsoft IIS environment, but it has not been tested.
+
+INSTALLATION
+
+ST4NK! Ticket requires the use of a MYSQL database and you will need to create a database or have one created for you.  In either case,
+you will need to know:
+
+The name of the database
+The name of the user who will own the database
+The password for the database user
+
+The ST4NK! Ticket package has an sql subdirectory where there is a st4nkticket.sql file that needs to be inserted into your database.
+You will either have to do this yourself via the mysql command line interface, phpMyAdmin or have your server admin do it for you.
+
+1) Unzip or untar the st4nkTicket package on your client machine.
+2) Edit the db.inc.php file in your favorite edit and replace the default database, user and password fields with your information.
+3) Save your changes to the db.inc.php file.
+4) Start an FTP session with your webserver and upload all files to your webserver root.
+5) Insert the st4nkTicket.sql file (found in the sql directory) into your database.
+6) Open your web browser and go to your ST4NK! Ticket website.  Examples:
+
+http://www.yourdomain.com/st4nkticket/
+
+OR
+
+http://www.somedomain.com/~myaccount/st4nkticket
+
+Whatever, you get the idea.  If things have worked out correctly you should see your ST4NK! Ticket website up and ready for use. Login
+as 'Admin' with password 'admin'.  BE SURE TO CREATE ANOTHER USER WITH LEVEL 5 ADMIN ACCESS THEN EITHER DELETE THE ADMIN ACCOUNT
+OR CHANGE THE PASSWORD.
+
+PROBLEMS
+
+If you have installation problems please visit the ST4NK! website for help.
+
+http://st4nk.digitalbluesky.net
+http://www.digitalbluesky.net

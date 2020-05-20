@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>New TPG Layout</title>
+        <meta name="viewport" content="width=device-width" />
+        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+        <style>
+            html {
+                background-color: #e2e2e2;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-color: #fff;
+                color: #333;
+                font-size: .85em;
+                font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            .content-wrapper {
+                margin: 0 auto;
+                max-width: 960px;
+            }
+
+            #body {
+                background-color: #efeeef;
+                clear: both;
+                padding-bottom: 35px;
+            }
+
+            .main-content {
+                padding-left: 10px;
+                padding-top: 30px;
+            }
+
+            header .content-wrapper {
+                padding-top: 20px; 
+            }
+
+            footer {
+                clear: both;
+                background-color: #e2e2e2;
+                font-size: .8em;
+                height: 100px;
+            }
+
+            header, footer, hgroup,
+            nav, section {
+                display: block;
+            }
+
+            mark {
+                background-color: #a6dbed;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .float-left {
+                float: left;
+            }
+
+            .float-right {
+                float: right;
+            }
+
+            .clear-fix:after {
+                content: ".";
+                clear: both;
+                display: block;
+                height: 0;
+                visibility: hidden;
+            }
+
+            a {
+                outline: none;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: orange !important;
+            }
+
+            /* Navigation   (copied and then modifed from: http://aext.net/2009/09/elegant-drop-menu-with-css-only/) */
+            /*--------------------------------------------------------------------------------------------------------------------*/
+
+            /* Parent Menu Non-Hover*/
+            .menu {
+                display: inline-block;
+                vertical-align: top;
+	            list-style: none;  
+	            margin: 0; 
+	            padding: 0;
+                font-size: 14px;
+                padding: 0;
+                line-height: 14px;
+            }
+
+            .menu li
+            {
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .menu li a
+            {
+	            float: left;
+	            display: block;
+	            padding: 13px 8px;
+	            text-decoration: none;
+                color: white;
+	            margin-right: 10px;
+            }
+
+            /* Parent Menu Hover (Also, see child menu pop-up) */
+            .menu li:hover a,
+            .menu li a:hover
+            {
+	            color: orange;
+            }
+
+            /*  Child Menu Invisible by Default */
+            .menu ul
+            {
+                display: none;
+                width: 201px;
+                position: absolute;
+            }
+
+            /* Child Menu Hover */
+            .menu li:hover ul
+            {
+                display: block;
+                margin-top: 25px;
+            }
+
+            .menu li:hover ul li a:hover,
+            .menu ul li a:hover
+            {
+                /*background: #add8e6;*/
+	            color: #FFF;
+                /*text-shadow: 1px 1px 0px #EEE;*/
+                font-size: 1em;
+                font-weight: 500;
+                background-color: #555;
+            }
+
+            /*  Child Menu Pop-up on Parent Menu Hover */
+            .menu li:hover ul li a,
+            .menu ul li a
+            {
+	            line-height: 200%;
+	            display: block;
+	            padding: 3px 6px;
+	            float: none;
+                background: #efeeef;
+                border: 1px groove #333;
+                border-radius: 3px;
+                position: relative;
+                display: block;
+                color: black;
+                background-color: #BBB;
+            }
+
+
+            /* Entire Child Menu */
+            .menu ul
+            {
+                float: none;
+	            position: absolute;
+	            list-style: none;
+	            margin: 0;
+                margin-left: 5px;
+                padding: 0;
+                top: 15px;
+            }
+
+            /* Child Menu Non-Hover */
+            .menu ul li
+            {
+                float: none;
+	            clear: none;
+	            margin: 0;
+	            padding: 0;
+	            width: auto;
+                font-size: 1em;
+                font-weight: 500;
+                z-index: 2000;
+                position: relative;
+                display: block;
+            }
+
+            #activeGame {
+                background-color: #efeeef;
+                border: 1px solid #efeeef;
+                -moz-border-radius:5px;  
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
+                display: block;
+                position: absolute;
+                left: 465px;
+                font-size: 14px;
+                padding: 6px 40px 16px 10px;
+                margin-top: 10px;
+                line-height: 14px;
+                color:black;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body style="border-top: solid 7px #FFF;">
+        <header style="height: 40px;background-color: #333;position: relative;white-space: nowrap;">
+            <div style="position: absolute; left: 0;margin:0;padding:0;border:0;height: 40px;vertical-align: top;">
+                <img alt="TPG" style="display: inline-block; margin:0;padding:4px 20px 0 20px;border:0;vertical-align: top;cursor:pointer;" src="./images/TPG.png"/>
+                
+                <ul class="menu">
+                    <li><a href="#">About Us</a>
+                        <ul>
+                            <li><a href="#">Our Story</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul></li>
+                    <li><a href="#">Forums</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Leagues</a>
+                        <ul>
+                            <li><a href="#">Day of Defeat 6v6</a></li>
+                            <li><a href="#">Day of Defeat 6v6: Euro</a></li>
+                            <li><a href="#">Day of Defeat 3v3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+            <span id="activeGame">Day of Defeat 6v6</span>
+
+            <div style="position: absolute; right: 0;height: 50px;">
+                <a href="#" style="display: inline-block;vertical-align: top;font-size: 14px;padding:13px 0;line-height: 14px;color:white;">User's Name Here</a>
+                <img id="settingGear" alt="gear" style="display: inline-block;margin:0;padding:12px 5px;vertical-align: top;cursor:pointer;" src="./images/gear.png"/>
+                <!--img id="facebookIcon" alt="Facebook icon" style="display: inline-block;margin:0 5px 0 0;padding:12px 5px;vertical-align: top;cursor:pointer;" src="./images/facebook.png"/-->
+            </div>
+            
+        </header>
+        <div id="body">
+            <section class="content-wrapper main-content clear-fix">
+                
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; 2003-2014 TPG Gaming Leagues</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        $(function () {
+            $('#facebookIcon').click(function () {
+                //window.open('http://www.facebook.com/tpgleague/');
+                //TODO: set status
+            });
+        });
+    </script>
+</html>

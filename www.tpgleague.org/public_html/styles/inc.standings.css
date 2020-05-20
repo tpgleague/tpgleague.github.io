@@ -1,0 +1,84 @@
+#standings a:link, #standings a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+#standings {
+  width: 100%;
+  margin: 1em 0;
+}
+
+#standings table {
+  width: 100%;
+  margin-bottom: 1em;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#standings table td {
+  margin: 0;
+  overflow: hidden;
+}
+
+#standings .group caption {
+  border-bottom: 2px inset #c60;
+}
+
+#standings .group tbody tr {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0px;
+  border-bottom: 1px solid #eee;
+}
+
+#standings .group tbody tr.zebra-odd {
+  background-color: #eee;
+}
+
+#standings .group tbody tr.zebra-even {
+  background-color: #eee;
+}
+
+#standings .group tbody tr[class|=zebra]:hover {
+  /* background-color: #c60; */
+  cursor: pointer;
+  border-bottom: 1px solid #c60;
+}
+
+#standings h2, #standings h3 {
+  margin: 0;
+  color: #c60;
+  text-align: right;
+}
+
+#standings h2 {
+  font-size: 1.5em;
+}
+
+#standings h3 {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+#standings th {
+  text-align: center;
+}
+
+#standings th.team {
+  text-align: left;
+}
+
+#standings caption {
+  text-align: right;
+  font-weight: bold;
+	color: #666;
+}
+
+#standings .teams_empty {
+  color: black;
+  border-bottom: 1px solid #eee;
+}
+
+#standings .teams_empty:hover {
+  text-decoration: none;
+}

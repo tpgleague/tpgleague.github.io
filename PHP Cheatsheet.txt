@@ -1,0 +1,51 @@
+Variables:
+    can use $variable inside string
+    use {$variable} if up against text
+    use $$ or \$ for dollar sign 
+    use ${$x} to lookup value of a variable (if $x = 'y' then $y is displayed)
+    word "global" overrides local scope and uses variable of same name in outer scope
+    Super Globals: $_GET, $_POST, $_COOKIE, $_SESSION, $_SERVER, $_ENV
+    isset(), unset(), settype($var, "integer");
+
+Functions:
+    void function retuns 1 or 0 if the function succeeded or not
+
+Strings:
+    case: strtolower, strtoupper, ucwords, ucfirst
+    parsing: substr, strlen, strpos, explode, rtrim
+    
+Arrays:
+    indexes can be strings  array("jan" => 1, "feb" => 2)
+    sort(), count()
+    in_array() -> bool, array_search() -> returns key
+    array_merge, array_intersect, array_diff
+    foreach($variables as $key => $value)
+    
+Dates:
+    date: current date, or format timestamp
+    mktime: takes pieces and makes a timestamp in machine timezone
+    gmmktime: takes piece and mkakes a GMT timestamp
+    strtotime: string to timestamp
+    getdate: takes timestamp makes array of parts
+    
+Classes:
+    -> to access methods and properties
+    
+Form Processing:
+    isset() to check if a checkbox is checked, unchecked boxes do not show up in array
+    htmlentities() filters out special charcters such as < and >
+    setcookie(key, value, ttl)
+    session_start() prior to setting session variables
+    
+File System:
+    file_exists, copy, rename, unlink, tempnam("/tmp","")
+    file_get_contents, file_put_contents, fopen, fclose, fgetscv, fputcsv
+
+Pear DB:
+    $res = $db->query($sql);
+    $res->numRows, $res->numCols
+    while($row = $res->fetchRow())
+        DB_FETCHMODE_ORDERED = indexes, DB_FETCHMODE_ASSOC = column names, DB_FETCHMODE_OBEJCT = property names
+    getOne, getRow, getAll, limitQuery($sql, startIndexFrom0, numRows);
+    $db->quoteSmart()
+    

@@ -1,0 +1,31 @@
+table.search_results {
+    /* border: 2px solid #aaa; */
+    border: 0;
+}
+table.search_results thead {
+    background-color: #eee;
+}
+table.search_results thead tr th {
+  border-bottom: 1px solid #aaa;
+}
+
+.odd {
+	background-color: #fff;
+}
+.even {
+	background-color: #eee;
+}
+table tbody td {
+	margin: 0;
+	padding: 0.5em;
+}
+table {
+    white-space: nowrap;
+}
+
+tbody {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 80%;
+}
+

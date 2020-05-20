@@ -1,0 +1,49 @@
+<Files article>
+ForceType application/x-httpd-php 
+</Files>
+
+php_flag display_errors off
+php_flag display_startup_errors off
+php_flag magic_quotes_gpc off
+php_flag register_globals off
+
+RewriteEngine On
+
+RewriteRule ^js/([.]*)$ /js/$1	[L]
+RewriteRule ^styles/([.]*)$ /styles/$1	[L]
+RewriteRule ^images/([.]*)$ /images/$1	[L]
+
+
+RewriteRule ^register/ /register.php	[QSA,L]
+RewriteRule ^new-user/ /new.user.php	[QSA,L]
+RewriteRule ^recover/ /recover.php	[QSA,L]
+#RewriteRule ^help/ /help.php	[QSA,L]
+
+RewriteRule ^news$ /index.php [QSA,L]
+RewriteRule ^news/$ /index.php [QSA,L]
+
+RewriteRule ^affil/([0-9]+)/ /affil.php?afid=$1 [QSA,L]
+
+RewriteRule ^([0-9a-z]{2,8})/teams$ /$1/teams/ [R]
+RewriteRule ^([0-9a-z]{2,8})/teams/ /team.list.php?lgname=$1 [L]
+
+RewriteRule ^([0-9a-z]{2,8})/news/page/([0-9]{1,4})/ /index.php?lgname=$1&page=$2 [QSA,L]
+RewriteRule ^([0-9a-z]{2,8})/news/ /index.php?lgname=$1 [QSA,L]
+
+RewriteRule ^([0-9a-z]{2,8})/rules/ /league.rules.php?lgname=$1 [QSA,L]
+
+RewriteRule ^([0-9a-z]{2,8})/suspensions/ /suspensions.php?lgname=$1 [QSA,L]
+RewriteRule ^([0-9a-z]{2,8})/pastchamps/ /past.champs.php?lgname=$1 [QSA,L]
+RewriteRule ^([0-9a-z]{2,8})/standings/ /standings.php?lgname=$1 [QSA,L]
+
+RewriteRule ^([0-9a-z]{2,8})/schedule/([0-9]+)/ /season.schedule.php?lgname=$1&sch_id=$2 [QSA,L]
+RewriteRule ^([0-9a-z]{2,8})/schedule/ /season.schedule.php?lgname=$1 [QSA,L]
+
+RewriteRule ^([0-9a-z]{2,8})/team/([0-9]+)$ /$1/team/$2/ [R]
+RewriteRule ^([0-9a-z]{2,8})/team/([0-9]+)/ /team.info.php?tid=$2&lgname=$1 [L]
+
+RewriteRule ^([a-z]{1}[a-z0-9]{1,7})$ /$1/		[QSA,R]
+RewriteRule ^([0-9a-z]{2,8})/$ /index.php?lgname=$1		[QSA,L]
+
+
+

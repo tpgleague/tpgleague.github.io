@@ -1,0 +1,97 @@
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>TPG Admin Backend</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="start" href="/support/index.php" />
+	<link rel="help" href="/support/help.php" />
+	
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow">
+    
+    <link rel="stylesheet" type="text/css" href="/support/css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.1" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/support/styles/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/support/styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="/support/styles/forms.css" />
+	<link rel="stylesheet" type="text/css" href="/support/styles/table.css" />
+
+<!-- JS -->
+
+		<script src="js/custom.js"></script>
+		<script src="js/ender.min.js"></script>
+		<script src="js/selectnav.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.1"></script>
+		<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tweet.js"></script>
+		<script>
+			jQuery(document).ready(function() {ldelim}
+				/* Flex Slider Call For home page 01*/
+				$('.flexslider').flexslider({ldelim}
+					directionNav: false,
+					pauseOnAction: false
+				{rdelim});
+				
+				/* Jcarousel Call */	
+				jQuery('#testimonials-carousel').jcarousel({ldelim}
+					auto: 6,
+					wrap: 'last',
+					scroll: 1,
+					visible:1,
+					initCallback: mycarousel_initCallback
+				{rdelim});
+				function mycarousel_initCallback(carousel) {ldelim}
+					// Disable autoscrolling if the user clicks the prev or next button.
+					carousel.buttonNext.bind('click', function() {ldelim}
+						carousel.startAuto(0);
+					{rdelim});
+					carousel.buttonPrev.bind('click', function() {ldelim}
+						carousel.startAuto(0);
+					{rdelim});
+					// Pause autoscrolling if the user moves with the cursor over the clip.
+					carousel.clip.hover(function() {ldelim}
+						carousel.stopAuto();
+					{rdelim}, function() {ldelim}
+						carousel.startAuto();
+					{rdelim});
+				{rdelim};
+			{rdelim});
+		</script>
+
+</head>
+
+<body {$extra_body_attr}>
+
+
+		<!-- Begin Wrapper -->
+		<div id="wrapper">
+			<!-- Begin Container -->
+			<div class="container">
+				<!-- Begin Header -->
+				<div id="header">
+					<!-- Begin Logo -->
+					<div class="eight columns">
+						<div id="logo">
+							<a href="http://www.tpgleague.org/"><img src="/support/images/logo.jpg" border="none" alt="logo"></a>
+						</div>
+					</div>
+					<!-- End Logo -->
+					
+				</div>
+				<!-- End Header -->  
+
+			</div>
+			<!-- End Container -->                
+                
+<div id="midsection">
+<br />
+
+
+<br />
+</div>
+
+
+
+
+
+

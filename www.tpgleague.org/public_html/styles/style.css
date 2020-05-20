@@ -1,0 +1,189 @@
+
+
+body {
+ background: #eee;
+ font: 10px Verdana, sans-serif;
+}
+
+input {
+ border: solid 1px #666;
+ font: normal 10px Verdana, Tahoma, Helvetica;
+}
+
+form input {
+  vertical-align: middle;
+}
+
+#login_form input[type="checkbox"] {
+
+}
+
+#content {
+
+}
+
+hr {
+  margin: 1em 0;
+  border: 1px dotted gray;
+  width: 90%;
+}
+
+div.news_item {
+  margin-top: 0em;
+  margin-bottom: 2em;
+  padding-top: 0;
+}
+
+h2.news_title {
+  font-size: 125%;
+  font-weight: bold;
+  margin-top: 0;
+	color: #666;
+	background-color: transparent;
+}
+
+legend a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px dotted black;
+}
+
+legend a:hover {
+  color: white;
+  border-color: white;
+}
+
+*.important {
+  color: red;
+  font-weight: bold;
+}
+
+#menu ul {
+  margin-left: 0;
+  margin-top: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+#menu a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu a:hover {
+  text-decoration: none;
+  color: #c60;
+}
+
+div.news_timestamp {
+  margin-top: 2em;
+  padding: 0;
+  margin-bottom: 0em;
+  color: #777;
+}
+
+#league_selector select {
+  background-color: #c60;
+  color: #eee;
+  border: 1px inset #c60;
+}
+
+.greyed-out {
+  color: #999;
+}
+
+input[type="submit"] {
+  border-width: 2px;
+  border-style: outset;
+}
+
+div#affiliates {
+  text-align: center;
+}
+
+div#affiliates img {
+  margin-bottom: 5px;
+}
+
+th {
+  text-align: left;
+}
+
+table caption {
+  font-weight: bold;
+}
+
+div.news_poll {
+  width: 85%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+table.table_poll {
+  margin: 1em auto;
+  padding: 0;
+}
+
+form.form_poll .radio {
+  border: 0;
+}
+
+p.poll_title {
+  font: 11px Verdana, sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+a.tpglink {
+  text-decoration: none;
+  color: #c60;
+}
+
+a.tpglink:hover {
+  text-decoration: underline;
+}
+
+a.tpglinkalt {
+  text-decoration: underline;
+  color: black;
+}
+
+.comment_container {
+    
+}
+
+.comment_header {
+    font-weight: bold;
+}
+
+.comment_content_container {
+    
+}
+
+.comment_content {
+    
+}
+
+table.tpg_results {
+    /* border: 2px solid #aaa; */
+    border: 0;
+    white-space: nowrap;
+}
+table.tpg_results thead {
+    background-color: #eee;
+}
+table.tpg_results thead tr th {
+  border-bottom: 1px solid #aaa;
+}
+
+table.tpg_results tbody {
+    margin: 0;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 0.5em;
+}
+
+table.tpg_results td {
+    margin: 0;
+    padding: 0.5em;
+}

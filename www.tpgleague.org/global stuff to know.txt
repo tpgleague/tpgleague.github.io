@@ -1,0 +1,10 @@
+Global Stuff to Know
+--------------------
+
+$tpl->assign('title', $pageTitle);  (set before include)
+$tpl->assign('lgname', '/'.$lgName);
+
+if ($lid)
+$tpl->assign('active_season_title', $leagueInfo['activeSeasonTitle']);
+$tpl->assign('mp_captain', TRUE);
+$tpl->assign('mp_owner', TRUE);

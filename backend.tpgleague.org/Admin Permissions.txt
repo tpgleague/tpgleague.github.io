@@ -1,0 +1,45 @@
+Remove IRC Nick, Add Steam Account Name?
+
+Globals:
+SUPERADMIN <-- true is super admin
+AID <-- contains admin id
+
+
+"Anti-Cheat", "General Manager", "League Admin", "Marketing", ""Operations"
+"Head", "Manager", "Assistant"
+
+checkPermission($permission, $permission_level, $levelid=0, $child_access=FALSE)
+
+permission = Department
+permission_level = 
+
+
+
+
+
+
+
+DATABASE:
+admin_permissions
+aid
+enum('News','Schedule','Edit Member','Edit Team','Roster','FAQ','Edit Admin','Rules','Admin Tracker','Seasons','Edit League','Move Team')
+enum('Sitewide','League','Division','Conference','Group')
+levelid
+permission_flag
+
+admin_permissions_meta
+"permission","enum('News','Schedule','Edit Member','Edit Team','Roster','FAQ','Edit Admin','Rules','Admin Tracker','Seasons','Edit League','Move Team')"
+"level","enum('Sitewide','League','Division','Group')"
+
+"News","League"
+"Schedule","Division"
+"Edit Member","Sitewide"
+"Edit Team","Group"
+"Roster","Group"
+"FAQ","League"
+"Edit Admin","League"
+"Rules","League"
+"Admin Tracker","Sitewide"
+"Seasons","League"
+"Edit League","Group"
+"Move Team","Division"

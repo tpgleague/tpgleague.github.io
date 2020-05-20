@@ -1,0 +1,33 @@
+.rule_header {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.rule {
+  padding: 0em;
+  margin: 2em 0;
+  width: 90%;
+}
+
+.rule_toc a {
+  text-decoration: none;
+}
+
+.updated {
+  border: 1px solid #c60;
+  padding: 0.25em;
+}
+
+.rules_notice {
+  padding: 1em;
+  border: 2px outset #c60;
+}
+
+.updated_star {
+  color: #c60;
+  font-weight: bold;
+}
+
+.rules_body {
+  text-align: justify;
+}

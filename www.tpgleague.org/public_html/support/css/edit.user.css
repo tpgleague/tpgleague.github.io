@@ -1,0 +1,41 @@
+table#logins {
+  border: 1px;
+}
+
+table#logins td {
+  padding: 2px 4px;
+
+}
+
+table#logins td.nowrap {
+  white-space: nowrap;
+}
+
+table#logins td {
+  vertical-align: top;
+}
+
+table#logins {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: #000000;
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+table#logins th {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #ffffff;
+	-moz-border-radius: ;
+}
+table#logins td {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #ffffff;
+	-moz-border-radius: ;
+}

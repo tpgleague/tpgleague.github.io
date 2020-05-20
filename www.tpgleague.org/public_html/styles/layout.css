@@ -1,0 +1,107 @@
+html, body {
+  height: 99%;
+  width: 99%;
+}
+
+body {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body {min-width:640px}
+
+#header,#menu,#content,#sub-section,#footer {
+
+overflow:hidden;
+
+display:inline-block;
+
+}
+
+/* safari and opera need this */
+#header,#footer {width:100%}
+
+#menu,#content,#sub-section {
+  float:left;
+  clear: none;
+}
+
+#wrapper {
+  width: 1000px;
+  min-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+}
+
+#menu {
+  width: 145px;
+  min-width: 145px;
+}
+
+#sub-section {
+  width: 180px;
+  min-width: 180px;
+}
+
+.content_standings {
+  width: 615px;
+  min-width: 615px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.content_self {
+  width: 795px;
+  min-width: 795px;
+  margin-left: 20px;
+  margin-right: 0px;
+}
+
+#footer {clear:left}
+
+#header {
+  height: 120px;
+  width: 100%;
+}
+
+#header-dods6 {
+  height: 145px;
+  width: 100%;
+}
+
+#header-dod6 {
+  height: 145px;
+  width: 100%;
+}
+
+#header-dod3 {
+  height: 145px;
+  width: 100%;
+}
+
+#top-nav {
+  position: relative;
+  left: 0;
+  float:left;
+  width: 98%;
+}
+
+div#league_selector {
+  margin-top: 5px;
+  padding: 0;
+}
+
+div#league_selector form {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+  float: right;
+}
+
+#tpg_logo {
+	float: left;
+	padding: 5px 0px 0px 0px;
+	margin: 0;
+	border-width: 0;
+}

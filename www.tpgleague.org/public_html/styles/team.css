@@ -1,0 +1,52 @@
+#team_page {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#team_page div table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 99%;
+  margin-bottom: 2em;
+}
+
+#team_roster {
+ white-space: nowrap;
+}
+
+#team_roster td {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+#team_schedule a {
+  text-decoration: none;
+  color: #c60;
+}
+
+#team_schedule a:hover {
+  text-decoration: underline;
+}
+
+.suspended {
+  color: red;
+  text-decoration: line-through;
+}
+
+a.gidlink {
+  text-decoration: none;
+  color: #c60;
+}
+
+a.gidlink:hover {
+  text-decoration: underline;
+}
+
+#team_schedule {
+  white-space: nowrap;
+}
+
+#team_schedule .non-divisional {
+  color: gray;
+}

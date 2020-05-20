@@ -1,0 +1,308 @@
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DBMS/Debug Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DBMS/Debug Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '2' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message:             SELECT  
+                    rosters.gid, 
+                    rosters.handle,
+                    UNIX_TIMESTAMP(rosters.join_date_gmt) AS unix_join_date_gmt, 
+                    UNIX_TIMESTAMP(rosters.leave_date_gmt) AS unix_leave_date_gmt, 
+                    rosters.removed_by_aid,
+                    teams.name AS team_name,
+                    leagues.lg_name,
+                    a1.admin_name AS added_by_admin,
+                    a2.admin_name AS removed_by_admin
+            FROM rosters
+            INNER JOIN teams USING (tid)
+            INNER JOIN leagues USING (lid)
+            LEFT JOIN admins AS a1 ON (rosters.added_by_aid = a1.aid)
+            LEFT JOIN admins AS a2 ON (rosters.removed_by_aid = a2.aid)
+            WHERE rosters.uid = '1' [nativecode=1054 ** Unknown column 'leagues.lg_name' in 'field list']<br>
+DBMS/Debug Message:             SELECT  
+                    rosters.gid, 
+                    rosters.handle,
+                    UNIX_TIMESTAMP(rosters.join_date_gmt) AS unix_join_date_gmt, 
+                    UNIX_TIMESTAMP(rosters.leave_date_gmt) AS unix_leave_date_gmt, 
+                    rosters.removed_by_aid,
+                    teams.name AS team_name,
+                    leagues.lg_name,
+                    a1.admin_name AS added_by_admin,
+                    a2.admin_name AS removed_by_admin
+            FROM rosters
+            INNER JOIN teams USING (tid)
+            INNER JOIN leagues USING (lid)
+            LEFT JOIN admins AS a1 ON (rosters.added_by_aid = a1.aid)
+            LEFT JOIN admins AS a2 ON (rosters.removed_by_aid = a2.aid)
+            WHERE rosters.uid = '1' [nativecode=1054 ** Unknown column 'leagues.lg_name' in 'field list']<br>
+DB Error: no such field<br>
+            SELECT  
+                    rosters.gid, 
+                    rosters.handle,
+                    UNIX_TIMESTAMP(rosters.join_date_gmt) AS unix_join_date_gmt, 
+                    UNIX_TIMESTAMP(rosters.leave_date_gmt) AS unix_leave_date_gmt, 
+                    rosters.removed_by_aid,
+                    teams.name AS team_name,
+                    leagues.lg_name,
+                    a1.admin_name AS added_by_admin,
+                    a2.admin_name AS removed_by_admin
+            FROM rosters
+            INNER JOIN teams USING (tid)
+            INNER JOIN leagues USING (lid)
+            LEFT JOIN admins AS a1 ON (rosters.added_by_aid = a1.aid)
+            LEFT JOIN admins AS a2 ON (rosters.removed_by_aid = a2.aid)
+            WHERE rosters.uid = '1' [nativecode=1054 ** Unknown column 'leagues.lg_name' in 'field list']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '4011' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '1973' AND lid = '1' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: SELECT TRUE FROM rosters WHERE uid = '3656' AND lid = '2' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DBMS/Debug Message: SELECT TRUE FROM rosters WHERE uid = '3656' AND lid = '2' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+DB Error: no such field<br>
+SELECT TRUE FROM rosters WHERE uid = '3656' AND lid = '2' AND leave_date_gmt = "0000-00-00 00:00:00" LIMIT 1 [nativecode=1054 ** Unknown column 'lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DBMS/Debug Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE divid.lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1054 ** Unknown column 'divid.lid' in 'where clause']<br>
+DBMS/Debug Message:     SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE divid.lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1054 ** Unknown column 'divid.lid' in 'where clause']<br>
+DB Error: no such field<br>
+    SELECT divid, cfid, conference_title 
+    FROM conferences 
+    INNER JOIN divisions USING (divid) 
+    WHERE divid.lid = '1' AND conferences.inactive = 0 AND divisions.inactive = 0 
+    ORDER BY conferences.sort_order DESC [nativecode=1054 ** Unknown column 'divid.lid' in 'where clause']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT cfid, grpid, group_title 
+    FROM groups 
+    INNER JOIN conferences USING (cfid) 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND groups.inactive = 0 AND conferences.inactive = 0 
+    ORDER BY groups.sort_order [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DBMS/Debug Message:     SELECT cfid, grpid, group_title 
+    FROM groups 
+    INNER JOIN conferences USING (cfid) 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND groups.inactive = 0 AND conferences.inactive = 0 
+    ORDER BY groups.sort_order [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT cfid, grpid, group_title 
+    FROM groups 
+    INNER JOIN conferences USING (cfid) 
+    INNER JOIN divisions USING (divid) 
+    WHERE lid = '1' AND groups.inactive = 0 AND conferences.inactive = 0 
+    ORDER BY groups.sort_order [nativecode=1052 ** Column 'lid' in where clause is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such table<br>
+Standard Code: -18<br>
+DBMS/User Message: REPLACE INTO admins_breadcrumbs (aid, page) VALUES ('1', '/') [nativecode=1146 ** Table 'tpgsite_tpgv2.admins_breadcrumbs' doesn't exist]<br>
+DBMS/Debug Message: REPLACE INTO admins_breadcrumbs (aid, page) VALUES ('1', '/') [nativecode=1146 ** Table 'tpgsite_tpgv2.admins_breadcrumbs' doesn't exist]<br>
+DB Error: no such table<br>
+REPLACE INTO admins_breadcrumbs (aid, page) VALUES ('1', '/') [nativecode=1146 ** Table 'tpgsite_tpgv2.admins_breadcrumbs' doesn't exist]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT uid, admins.inactive, aid FROM users_cookies INNER JOIN users USING (uid) INNER JOIN admins USING (uid) WHERE username = 'shotcrete' AND loginkey = '5GzNg003BIbB28Vo__AW1YXOEeCRA2tP' AND users.deleted = 0 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '34' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no database selected<br>
+Standard Code: -14<br>
+DBMS/User Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DBMS/Debug Message: SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>
+DB Error: no database selected<br>
+SELECT superadmin, users.deleted, admins.inactive FROM admins INNER JOIN users USING (uid) WHERE aid = '35' LIMIT 1 [nativecode=2006 ** MySQL server has gone away]<br>

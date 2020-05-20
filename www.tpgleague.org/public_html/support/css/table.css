@@ -1,0 +1,41 @@
+table.clean {
+  border: 1px;
+}
+
+table.clean td {
+  padding: 2px 4px;
+
+}
+
+table.clean td.nowrap {
+  white-space: nowrap;
+}
+
+table.clean td {
+  vertical-align: top;
+}
+
+table.clean {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: solid;
+	border-color: #000000;
+	border-collapse: collapse;
+	background-color: #ffffff;
+}
+table.clean th {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #ffffff;
+	-moz-border-radius: ;
+}
+table.clean td {
+	border-width: 1px;
+	padding: 4px;
+	border-style: solid;
+	border-color: #000000;
+	background-color: #ffffff;
+	-moz-border-radius: ;
+}

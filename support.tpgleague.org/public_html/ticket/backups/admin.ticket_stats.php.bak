@@ -1,0 +1,157 @@
+<?php
+
+/********************************************************************************************
+*                                                                                            
+* ST4NK!Ticket content management system, copyright 2005 and beyond by Digital Bluesky, LLC. 
+* Released under the BSD License,  see the LICENSE.txt file for more infomation.             
+*                                                                                            
+* Although greatly modified at this point, the origianl concepts for the basis of this       
+* code were taken from "Web Database Applications with PHP and MySQL" published by O'Reilly  
+* and Associates and authored by Hugh E. Williams and David Lane.                            
+*                                                                                            
+*/
+
+// ST4NK! Ticket Beta v0.1 - admin.ticket_stats.php
+
+session_start();
+
+// REQUIRE AUTHENTICATION AND ONLY LET AUTH'D PEOPLE HAVE ACCESS
+
+require "./includes/authentication.inc.php";
+sessionAuthenticate();
+
+// REQUIRE DB ACCESS FOR THIS PAGE
+
+require "./config.php";
+require "./includes/db.inc.php";
+
+// OPEN THE DATABASE CONNECTION
+
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+
+// DETERMINE IF USER HAS RIGHTS TO ACCESS PAGE
+
+if (isset($_SESSION["loginUsername"])) {
+$admin_handle = $_SESSION["loginUsername"];
+$query = mysql_query ("SELECT * FROM st4nkticket_helpers WHERE helper_handle = '$admin_handle'");
+$row = @mysql_fetch_array($query);
+$admin_access = $row["helper_admin_level"];
+	
+if ($admin_access > 0) {
+
+// HEADER
+
+require "./templates/admin.header.tpl";
+
+// BODY
+
+print "<table align=center bgcolor=#FFFFFF border=0 width=1000>\n";
+
+print "<tr><td colspan=2><p><i>You are logged in as {$_SESSION["loginUsername"]} </i></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+
+// GET THE TIME
+
+$settings = mysql_query ("SELECT * FROM st4nkticket_settings WHERE settings_id=1");
+$settingsrow = @mysql_fetch_array($settings);
+$timeoffset = $settingsrow["settings_time_offset"];
+$timestamptoday = date("U");
+$datetoday = gmdate("D M d Y g:i a", $timestamptoday +3600*$timeoffset);
+print "<tr><td colspan=2><p>Stats accurate as of $datetoday</p></td></tr>";
+
+// CALCULATE TICKET STATS
+
+print "<tr><td width=200>&nbsp</td><td width=800><p>&nbsp</p></td></tr>";
+print "<tr><td colspan=2><p><b>Ticket Stats</b></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+
+// find the total number of tickets
+
+$query1 = mysql_query ("SELECT * FROM st4nkticket_tickets");
+$total_tickets = mysql_num_rows($query1);
+print "<tr><td><p>Total tickets in the database:</td><td align=left><p>$total_tickets</p></td></tr>";
+
+// find the total number of pending tickets
+
+$query2 = mysql_query ("SELECT * FROM st4nkticket_tickets WHERE ticket_status = 'pending'");
+$pending_tickets = mysql_num_rows($query2);
+print "<tr><td><p>Total number of pending tickets:</td><td align=left><p>$pending_tickets</p></td></tr>";
+
+// find the total number of active tickets
+
+$query3 = mysql_query ("SELECT * FROM st4nkticket_tickets WHERE ticket_status = 'active'");
+$active_tickets = mysql_num_rows($query3);
+print "<tr><td><p>Total number of active tickets:</td><td align=left><p>$active_tickets</p></td></tr>";
+
+// find the total number of closed tickets
+
+$query4 = mysql_query ("SELECT * FROM st4nkticket_tickets WHERE ticket_status = 'closed'");
+$closed_tickets = mysql_num_rows($query4);
+print "<tr><td><p>Total number of closed tickets:</td><td align=left><p>$closed_tickets</p></td></tr>";
+
+// CALCULATE CATAGORY STATS
+
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+print "<tr><td colspan=2><p><b>Catagory Stats</b></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+print "<tr><td><p><u>Catagory</u></p></td><td><p><u>Tickets</u></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+
+// find the total number of tickets by catagory
+
+$query5 = mysql_query ("SELECT *  FROM st4nkticket_catagories ORDER BY catagory_name");
+
+while ($row5 = mysql_fetch_array($query5))
+
+{
+
+$catagory_name = $row5["catagory_name"];
+$query6 = mysql_query ("SELECT * FROM st4nkticket_tickets WHERE ticket_catagory = '$catagory_name'");
+$catagory_tickets = mysql_num_rows($query6);
+print "<tr><td><p>$catagory_name</p></td><td><p>$catagory_tickets</p></td></tr>\n";
+
+}
+
+// CALCULATE HELPER STATS
+
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+print "<tr><td colspan=2><p><b>Helper Stats</b></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+print "<tr><td><p><u>Helper</u></p></td><td><p><u>Tickets</u></p></td></tr>\n";
+print "<tr><td colspan=2><p>&nbsp</p></td></tr>\n";
+
+// find the total number of tickets handled by each helper
+
+$query7 = mysql_query ("SELECT *  FROM st4nkticket_helpers WHERE helper_active = 'yes' ORDER BY helper_handle");
+
+while ($row7 = mysql_fetch_array($query7))
+
+{
+
+$helper_handle = $row7["helper_handle"];
+$helper_id = $row7["helper_id"];
+$query8 = mysql_query ("SELECT * FROM st4nkticket_tickets WHERE ticket_helper = '$helper_id'");
+$helper_tickets = mysql_num_rows($query8);
+print "<tr><td><p>$helper_handle</p></td><td><p>$helper_tickets</p></td></tr>\n";
+
+}
+
+print "</table>\n";
+
+// FOOTER
+
+require "./templates/admin.footer.tpl";
+
+} else {
+
+header("Location: error_logout.php");
+
+exit;
+
+}
+
+}
+
+?>
+

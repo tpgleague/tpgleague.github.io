@@ -1,0 +1,39 @@
+.permissions_form li {
+  margin-left: 1em;
+  margin-right: 1em;
+  margin-top: .25em;
+  margin-bottom: .25em;
+}
+
+.permissions_form ul.global {
+  list-style-image: url('/images/icons/world.png');
+}
+
+.permissions_form ul.global li {
+  padding-left: 6px;
+}
+
+.permissions_form ul.league {
+  list-style-image: none;
+  list-style: square;
+}
+
+.permissions_form ul.division {
+  list-style: circle;
+}
+
+.permissions_form ul.conference {
+  list-style: disc;
+}
+
+.permissions_form ul.group {
+  list-style: circle;
+}
+
+img {
+  vertical-align: middle;
+}
+
+div#key img {
+  padding-right: 20px;
+}

@@ -1,0 +1,12 @@
+.verticaltext {
+  writing-mode: tb-rl;
+  filter: flipv fliph;
+}
+
+#roster_list td.checkbox {
+  text-align: center;
+}
+
+#roster_list th {
+  vertical-align: bottom;
+}

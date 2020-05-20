@@ -1,0 +1,76 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<title>TPG Admin Backend</title>
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="start" href="/index.php" />
+	<link rel="help" href="/help.php" />
+{if $link_rel_previous}	<link rel="previous" href="{$link_rel_previous}" />{/if}
+{if $link_rel_previous}	<link rel="next" href="{$link_rel_next}" />{/if}
+
+	<link rel="stylesheet" type="text/css" href="/styles/layout.css" />
+	<link rel="stylesheet" type="text/css" href="/styles/style.css" />
+	<link rel="stylesheet" type="text/css" href="/styles/forms.css" />
+	<link rel="stylesheet" type="text/css" href="/styles/table.css" />
+{if $external_css}
+{foreach from=$external_css item=ext_css}
+	<link rel="stylesheet" type="text/css" href="/styles/{$ext_css}.css" />
+{/foreach}
+{/if}
+
+{if $external_js}
+{foreach from=$external_js item=ext_js}
+	<script src="/js/{$ext_js}.js" type="text/javascript"></script>
+{/foreach}
+{/if}
+
+	<script src="/js/submit.once.js" type="text/javascript"></script>
+
+
+{if $extra_head}
+{foreach from=$extra_head item=eh}
+	{$eh}
+{/foreach}
+{/if}
+
+
+
+</head>
+
+<body {$extra_body_attr}>
+
+
+<div id="header">
+	<div id="top-nav">
+		<ul>
+			<li><a href="http://www.tpgleague.org/">Home</a></li>
+			<li><a href="/admins.php">Admins</a></li>
+			{if $smarty.const.SUPERADMIN}<li><a href="/admins.action.log.php">Global Admin Log</a></li>{/if}
+			<li><a href="/news.php">News</a></li>
+			<li><a href="/member.search.php">Members</a></li>
+			<li><a href="/leagues.php">League Management</a></li>
+			<li><a href="/pending.approval.php">Teams Pending Approval <span style="color: {if $teams_pending_approval_count}red{else}blue{/if};">({$teams_pending_approval_count})</span></a></li>
+			<li><a href="http://mail.tpgleague.org:8000/">Webmail</a></li>
+			<li><a href="http://support.tpgleague.org/ticket/admin.login.php">Support Tickets</a></li>
+			<li><a href="http://forums.tpgleague.org/dod/">Forums</a></li>
+                  <li><a href="/?logout">Logout</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="midsection">
+
+<div>
+{foreach from=$page_history item='page' name='pages_loop'}
+      <a href="{$page}" title="{$page|escape}" style="text-decoration: none;">{$page|truncate:40:'...'|escape}</a> {if !$smarty.foreach.pages_loop.last} » {/if}
+{/foreach}
+</div>
+
+<br />
+
+
+

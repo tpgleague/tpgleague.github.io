@@ -1,0 +1,17 @@
+roster_check {match number}
+add filtering of HLTV and bots? from steam IDs
+use team say
+
+http://www.tpgleague.org/rostercheck.php?mid=6270&ids=STEAM_0:0:20422055,STEAM_0:0:00000
+
+
+
+
+
+gethostbyname: http://www.php.net/manual/en/function.gethostbyname.php
+echo gethostbyname('stackoverflow.com'); // 69.59.196.211
+
+gethostbyaddr: http://www.php.net/manual/en/function.gethostbyaddr.php
+
+parse_url: http://php.net/manual/en/function.parse-url.php
+$urlParts = parse_url('http://111.111.111.111/~example/index.php'); 

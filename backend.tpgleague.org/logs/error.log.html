@@ -1,0 +1,425 @@
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message: CALL rules_insert_node('5', '300', '238', 'after') [nativecode=1305 ** PROCEDURE tpgleague.rules_insert_node does not exist]<br>
+DBMS/Debug Message: CALL rules_insert_node('5', '300', '238', 'after') [nativecode=1305 ** PROCEDURE tpgleague.rules_insert_node does not exist]<br>
+DB Error: unknown error<br>
+CALL rules_insert_node('5', '300', '238', 'after') [nativecode=1305 ** PROCEDURE tpgleague.rules_insert_node does not exist]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message: SHOW COLUMNS FROM leagues WHERE Field LIKE 'gid_type' [nativecode=126 ** Incorrect key file for table '/tmp/mysqltmp/#sql_116e_0.MYI'; try to repair it]<br>
+DBMS/Debug Message: SHOW COLUMNS FROM leagues WHERE Field LIKE 'gid_type' [nativecode=126 ** Incorrect key file for table '/tmp/mysqltmp/#sql_116e_0.MYI'; try to repair it]<br>
+DB Error: unknown error<br>
+SHOW COLUMNS FROM leagues WHERE Field LIKE 'gid_type' [nativecode=126 ** Incorrect key file for table '/tmp/mysqltmp/#sql_116e_0.MYI'; try to repair it]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message: INSERT INTO suspensions_uids (suspid, uid) VALUES ('147', 'Smitty') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+DBMS/Debug Message: INSERT INTO suspensions_uids (suspid, uid) VALUES ('147', 'Smitty') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+DB Error: unknown error<br>
+INSERT INTO suspensions_uids (suspid, uid) VALUES ('147', 'Smitty') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message: INSERT INTO suspensions_uids (suspid, uid) VALUES ('148', 'Medik') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+DBMS/Debug Message: INSERT INTO suspensions_uids (suspid, uid) VALUES ('148', 'Medik') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+DB Error: unknown error<br>
+INSERT INTO suspensions_uids (suspid, uid) VALUES ('148', 'Medik') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/suspensions_uids`, CONSTRAINT `FK_suspensions_uid_uid` FOREIGN KEY (`uid`) REFERENCES `users` (`uid`))]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+DBMS/Debug Message:     SELECT lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT leagues.lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+DBMS/Debug Message:     SELECT leagues.lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT leagues.lid,
+        league_title,
+        description,
+        inactive,
+        deleted,
+        roster_lock,
+        lgname,
+        linked_lid,
+        show_rules,
+        games.game_name,
+        UNIX_TIMESTAMP(last_rule_update_gmt) as last_rule_update_gmt,
+        UNIX_TIMESTAMP(create_date_gmt) as create_date_gmt,
+        seasons.sid,
+        seasons.season_number,
+        seasons.season_title
+    FROM leagues
+    LEFT OUTER JOIN games on games.gameid = leagues.gameid
+    LEFT OUTER JOIN seasons on seasons.lid = leagues.lid AND seasons.active = 1 [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: no such field<br>
+Standard Code: -19<br>
+DBMS/User Message: INSERT INTO leagues_sides (side_one) VALUES ('Terrorist') [nativecode=1054 ** Unknown column 'side_one' in 'field list']<br>
+DBMS/Debug Message: INSERT INTO leagues_sides (side_one) VALUES ('Terrorist') [nativecode=1054 ** Unknown column 'side_one' in 'field list']<br>
+DB Error: no such field<br>
+INSERT INTO leagues_sides (side_one) VALUES ('Terrorist') [nativecode=1054 ** Unknown column 'side_one' in 'field list']<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message: INSERT INTO leagues_sides (side) VALUES ('Terrorist') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/leagues_sides`, CONSTRAINT `FK_leagues_sides_lid` FOREIGN KEY (`lid`) REFERENCES `leagues` (`lid`))]<br>
+DBMS/Debug Message: INSERT INTO leagues_sides (side) VALUES ('Terrorist') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/leagues_sides`, CONSTRAINT `FK_leagues_sides_lid` FOREIGN KEY (`lid`) REFERENCES `leagues` (`lid`))]<br>
+DB Error: unknown error<br>
+INSERT INTO leagues_sides (side) VALUES ('Terrorist') [nativecode=1452 ** Cannot add or update a child row: a foreign key constraint fails (`tpgleague/leagues_sides`, CONSTRAINT `FK_leagues_sides_lid` FOREIGN KEY (`lid`) REFERENCES `leagues` (`lid`))]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: syntax error<br>
+Standard Code: -2<br>
+DBMS/User Message:     SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_n' at line 7]<br>
+DBMS/Debug Message:     SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_n' at line 7]<br>
+DB Error: syntax error<br>
+    SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_n' at line 7]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name,
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+DBMS/Debug Message:     SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name,
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT 
+            handle,
+            lid,
+            lgname,
+            tid,
+            team_name,
+            suspensions.deleted,
+            IF(suspensions.lid IS NULL, "", leagues.gid_name) AS gid_name,
+            GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS `gid`,
+            rule_violation,
+            reason, 
+            UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+            UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date 
+    FROM suspensions_list AS suspensions 
+    LEFT JOIN suspensions_uids su ON suspensions.suspid = su.suspid
+    LEFT JOIN suspensions_gids sg ON suspensions.suspid = sg.suspid
+    LEFT JOIN leagues ON leagues.lid = suspensions.lid 
+    GROUP BY suspensions.suspid
+    ORDER BY suspensions.deleted ASC, suspensions.create_date_gmt DESC [nativecode=1052 ** Column 'lid' in field list is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: syntax error<br>
+Standard Code: -2<br>
+DBMS/User Message: SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DBMS/Debug Message: SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DB Error: syntax error<br>
+SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: syntax error<br>
+Standard Code: -2<br>
+DBMS/User Message: SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DBMS/Debug Message: SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DB Error: syntax error<br>
+SELECT firstname, lastname, handle FROM users WHERE uid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: unknown error<br>
+Standard Code: -1<br>
+DBMS/User Message:     SELECT
+        suspensions_list.suspid,
+        suspensions_list.deleted,
+        create_date_gmt,
+        suspension_added_by_aid,
+        suspension_last_edited_by_aid,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_added_by_aid LIMIT 1) AS added_admin,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_last_edited_by_aid LIMIT 1) AS edited_admin,
+        firstname,
+        lastname,
+        handle,
+        reason,
+        rule_violation,
+        suspension_type,
+        UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date,
+        UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+        tid,
+        team_name,
+        mid,
+        suspensions_list.lid,
+        leagues.lgname,
+        GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS gid,
+        GROUP_CONCAT( DISTINCT su.uid SEPARATOR ', ' ) AS uid
+    FROM suspensions_list
+        LEFT OUTER JOIN leagues ON leagues.lid = suspensions_list.lid 
+        LEFT OUTER JOIN suspensions_uids su ON suspensions_list.suspid = su.suspid
+        LEFT OUTER JOIN suspensions_gids sg ON suspensions_list.suspid = sg.suspid
+    WHERE suspensions_list.suspid = '178'
+    GROUP BY suspensions_list.suspid [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+DBMS/Debug Message:     SELECT
+        suspensions_list.suspid,
+        suspensions_list.deleted,
+        create_date_gmt,
+        suspension_added_by_aid,
+        suspension_last_edited_by_aid,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_added_by_aid LIMIT 1) AS added_admin,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_last_edited_by_aid LIMIT 1) AS edited_admin,
+        firstname,
+        lastname,
+        handle,
+        reason,
+        rule_violation,
+        suspension_type,
+        UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date,
+        UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+        tid,
+        team_name,
+        mid,
+        suspensions_list.lid,
+        leagues.lgname,
+        GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS gid,
+        GROUP_CONCAT( DISTINCT su.uid SEPARATOR ', ' ) AS uid
+    FROM suspensions_list
+        LEFT OUTER JOIN leagues ON leagues.lid = suspensions_list.lid 
+        LEFT OUTER JOIN suspensions_uids su ON suspensions_list.suspid = su.suspid
+        LEFT OUTER JOIN suspensions_gids sg ON suspensions_list.suspid = sg.suspid
+    WHERE suspensions_list.suspid = '178'
+    GROUP BY suspensions_list.suspid [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+DB Error: unknown error<br>
+    SELECT
+        suspensions_list.suspid,
+        suspensions_list.deleted,
+        create_date_gmt,
+        suspension_added_by_aid,
+        suspension_last_edited_by_aid,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_added_by_aid LIMIT 1) AS added_admin,
+        (SELECT admin_name FROM admins WHERE admins.aid = suspensions_list.suspension_last_edited_by_aid LIMIT 1) AS edited_admin,
+        firstname,
+        lastname,
+        handle,
+        reason,
+        rule_violation,
+        suspension_type,
+        UNIX_TIMESTAMP(suspension_date_starts_gmt) AS start_date,
+        UNIX_TIMESTAMP(suspension_date_ends_gmt) AS end_date, 
+        tid,
+        team_name,
+        mid,
+        suspensions_list.lid,
+        leagues.lgname,
+        GROUP_CONCAT( DISTINCT sg.gid SEPARATOR ', ' ) AS gid,
+        GROUP_CONCAT( DISTINCT su.uid SEPARATOR ', ' ) AS uid
+    FROM suspensions_list
+        LEFT OUTER JOIN leagues ON leagues.lid = suspensions_list.lid 
+        LEFT OUTER JOIN suspensions_uids su ON suspensions_list.suspid = su.suspid
+        LEFT OUTER JOIN suspensions_gids sg ON suspensions_list.suspid = sg.suspid
+    WHERE suspensions_list.suspid = '178'
+    GROUP BY suspensions_list.suspid [nativecode=1052 ** Column 'create_date_gmt' in field list is ambiguous]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: syntax error<br>
+Standard Code: -2<br>
+DBMS/User Message: DELETE FROM suspensions_uids WHERE suspid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DBMS/Debug Message: DELETE FROM suspensions_uids WHERE suspid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+DB Error: syntax error<br>
+DELETE FROM suspensions_uids WHERE suspid = ? [nativecode=1064 ** You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?' at line 1]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: mismatch<br>
+Standard Code: -7<br>
+DBMS/User Message: INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>
+DBMS/Debug Message: INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>
+DB Error: mismatch<br>
+INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>
+
+<br><font color="red"><br>
+Standard Message: DB Error: mismatch<br>
+Standard Code: -7<br>
+DBMS/User Message: INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>
+DBMS/Debug Message: INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>
+DB Error: mismatch<br>
+INSERT INTO suspensions_list (handle, tid, team_name, rule_violation, reason, suspension_added_by_aid, suspension_last_edited_by_aid, suspension_date_ends_gmt, suspension_type, create_date_gmt, firstname, lastname, suspension_date_starts_gmt, mid, lid, stank_ticket_number) VALUES ( ,  ,  ,  ,  ,  ,  ,  ,  , NOW(),  ,  ,  ,  ,  ) [DB Error: mismatch]<br>

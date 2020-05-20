@@ -1,0 +1,61 @@
+require_once '../includes/inc.initialization.php';
+    require_once 'inc.includes.php';
+        require_once 'inc.include-path.php';
+            Sets include paths such as common_includes, smarty, and pear
+        require_once 'inc.config.php';
+            COOKIE_DOMAIN_NAME, MY_ERROR_REPORTING, MY_DISPLAY_ERRORS, and db connection info
+        require_once 'inc.func-include.php';
+            date related, loggedin(), redirect, displayerror()
+        require_once 'inc.db.php';
+            database options
+    require_once 'inc.quickform.php';  -- appears to be used with a quick form functionality
+    require_once 'inc.league.selector.php';
+        getLeaguesList()
+    require_once 'inc.func-common.includes.php';  (in ../common_includes/)
+        getPrivilegedMembers($tid), sending email, and date array to string functions
+    require_once 'inc.login.php';
+        require_once 'inc.func-hash-password.php';  (in ../common_includes/)
+        login for users and gets their teams, etc... 
+    //require_once 'inc.defines.php';    --> Defined LID
+    require_once 'inc.cls-updateRecord.php';
+        user actions logging
+    require_once 'inc.func-checkTeamRosterLock.php'; (in ../common_includes/)
+    require_once 'inc.func-hash-password.php'; (in ../common_includes/)
+    
+require_once '../includes/inc.db.php'; affil
+
+
+
+require_once 'inc.func-schedule.php';    (in ../common_includes/);  report.match
+require_once 'inc.func-updateStandings.php';   (in ../common_includes/); report.match
+require_once 'inc.cls-gid.php'; (in ../common_includes/); (create.team, join.team, manage.roster, my.teams)
+    Used for creating Steam IDs
+   
+    
+Remove:
+    require_once '../includes/inc.initialization.search.php';
+    
+    
+    
+    
+    
+    
+    
+inc.cls-updateRecord.php
+inc.config.php
+inc.db.php
+inc.defines.php
+inc.func-include.php
+inc.func-poll.php
+inc.func-standings.php
+inc.includes.php
+inc.include-path.php
+inc.initialization.php
+inc.league.selector.php
+inc.login.php
+inc.quickform.php
+
+
+
+display
+parameter-defines

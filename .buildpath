@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry kind="src" path="www.tpgleague.org/includes"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%64/649"/>
+	<buildpathentry kind="src" path="backend.tpgleague.org/smarty/templates"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%C8/C82"/>
+	<buildpathentry kind="src" path="backend.tpgleague.org/smarty/plugins"/>
+	<buildpathentry kind="src" path="common_includes"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%D4/D4A"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates"/>
+	<buildpathentry kind="con" path="org.eclipse.php.core.LANGUAGE"/>
+	<buildpathentry kind="src" path="backend.tpgleague.org/includes"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/public_html"/>
+	<buildpathentry kind="src" path="backend.tpgleague.org/public_html"/>
+	<buildpathentry kind="src" path="common_emails"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%2F/2FC"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%40/40C"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%5B/5B0"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/plugins"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%45/45E"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%C2/C23"/>
+	<buildpathentry kind="src" path="www.tpgleague.org/smarty/templates_c/%%72/72D"/>
+</buildpath>

@@ -1,0 +1,17 @@
+Add max scheudlers and reporters to backend
+Image review area
+link steam ids and user names elsewhere on front end
+add knockout sorting grid to team list.  show counts.
+add game screen to backend for game id formats
+name_change_approvals
+date time of match on Week name
+
+- A page for each user (team history, link to steam profile, avatar, etc...)
+- Comment on news pages
+- A page to view standings and schedules from previous seasons
+- A resources page that will link to various DOD related sites and download sites as well as how to information
+- An on site support ticket system, so we don't have to link out to a 3rd party one. This would automatically link a dispute to your account, your team, your match, and even let you check off players on the opposition roster you wish to dispute. With this information we could even flag the match as disputed on the schedule page until the dispute was resolved.
+
+
+http://gamegate2k.com/half-life/dayofdefeat/client-console-commands-dod/
+http://planethalflife.gamespy.com/View.php?view=DODGameInfo.Detail&id=8&game=9

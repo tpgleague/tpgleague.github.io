@@ -1,0 +1,89 @@
+      <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	
+	<head>
+		<title>TPG</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<!-- Stylesheet -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.1" media="screen" />
+
+		<!-- Google web fonts -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow">
+		
+		<!-- JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/custom.js"></script>
+		<script src="js/ender.min.js"></script>
+		<script src="js/selectnav.js"></script>
+		<script src="js/jquery.flexslider.js"></script>
+		<script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.1"></script>
+		<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tweet.js"></script>
+		<script>
+			jQuery(document).ready(function() {
+				/* Flex Slider Call For home page 01*/
+				$('.flexslider').flexslider({
+					directionNav: false,
+					pauseOnAction: false
+				});
+				
+				/* Jcarousel Call */	
+				jQuery('#testimonials-carousel').jcarousel({
+					auto: 6,
+					wrap: 'last',
+					scroll: 1,
+					visible:1,
+					initCallback: mycarousel_initCallback
+				});
+				function mycarousel_initCallback(carousel) {
+					// Disable autoscrolling if the user clicks the prev or next button.
+					carousel.buttonNext.bind('click', function() {
+						carousel.startAuto(0);
+					});
+					carousel.buttonPrev.bind('click', function() {
+						carousel.startAuto(0);
+					});
+					// Pause autoscrolling if the user moves with the cursor over the clip.
+					carousel.clip.hover(function() {
+						carousel.stopAuto();
+					}, function() {
+						carousel.startAuto();
+					});
+				};
+			});
+		</script>
+	</head>
+
+
+		
+		<!-- Begin Footer -->
+		<div id="footer">
+				
+				
+			<!-- Begin Footer Bottom -->
+			<div id="footer-bottom">
+				<!-- Begin Container -->
+					<div class="container">
+					
+						<div class="eight columns">
+							<div id="copyright">&#169; Copyright 2012 by <span>TPG</span>. All Rights Reserved.</div>
+						</div>
+						
+						<div class="eight columns">
+							<ul class="social-icons" >
+							<li><h7>Developed by Tin Bad<h7></li>
+						</ul>
+						</div>
+					</div>
+				<!-- End Container -->
+			</div>
+			<!-- End Footer Bottom -->
+			
+			</div>
+		<!-- End Footer -->
+			
+    </body>
+</html>

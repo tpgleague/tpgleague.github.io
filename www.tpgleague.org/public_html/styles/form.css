@@ -1,0 +1,151 @@
+
+fieldset.qffieldset {
+  margin: 20px 10px 20px 0px;
+	padding: 0px 10px 10px 10px;
+  border: 0px solid gray;
+}
+
+.qffieldset legend {	
+	background-color:#c60;
+	
+	border-width:1px 1px 1px 1px;
+	border-color:#542700;
+	border-style:solid;
+	
+	color: black;
+	font-weight:bold;
+	font-size:90%;
+	text-align:center;
+
+	padding:3px 5px;
+ 	margin:0px 0px 15px 0px;
+}
+
+.qffieldset label {
+	display: block;
+	width: 150px;
+	float: left;
+  margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.qffieldset input, .qffieldset div.static {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.qffieldset textarea, .qffieldset input, .qffieldset select {
+  background-color: #CACACA;
+}
+
+.qffieldset select {
+  margin-bottom: 10px;
+}
+
+.qffieldset textarea {
+	width: 300px;
+}
+
+
+
+
+.qffieldset label {
+	text-align: right;
+	width: 200px;
+	padding-right: 5px;
+}
+
+
+.qffieldset div .small_note {
+  /*
+  left: 205px;
+  */
+  display: block;
+  width: auto;
+  margin: -5px 0px 5px 210px;
+  padding: 1px 0px;
+  height: 1%;
+}
+
+.qffieldset .notes {
+  border: 2px groove #c60;
+  color: black;
+  width: 150px;
+  padding: 4px;
+  clear: none;
+  float: right;
+}
+
+.qffieldset .notes_label {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: #666666;
+}
+
+input.submit {
+  display: block;
+  width: auto;
+  margin: -25px 0px 0px 215px;
+  padding: 2px 3px;
+  height: 1%;
+  border-width: 2px;
+  border-style: outset;
+}
+
+form textarea.expanding {
+  overflow: auto;
+  overflow-x: auto;
+  overflow-y: visible;
+}
+
+
+/* progress bar for textarea */
+.progress{
+	width: 1px;
+	height: 14px;
+	color: white;
+	font-size: 12px;
+  overflow: hidden;
+	background-color: #c60;
+	padding-left: 5px;
+}
+
+.qffieldset label {
+  display: block;
+  clear: left;
+}
+
+input.checkbox {
+  width: auto;
+}
+
+
+form p.error {
+  background-image: url(/images/icon_error.gif);
+  background-position: top center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: black;
+  margin: 5px 15px;
+  border: 2px black outset;
+  font-weight: bold;
+  padding: 20px 20px 5px;
+}
+
+
+form div.error p.error {
+  background-image: none;
+  border-style: none;
+  font-weight: bold;
+  margin: -5px 0px 5px 118px;
+  width: auto;
+  color: #ff0000;
+}
+
+.qffieldset input {
+  padding: 0;
+}
+
+form.qffieldset {
+
+}

@@ -1,0 +1,10 @@
+table.spaced_table tbody td, th {
+    margin: 0;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+table.spaced_table {
+    white-space: nowrap;
+}
+

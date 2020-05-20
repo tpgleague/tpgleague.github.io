@@ -1,0 +1,119 @@
+<?php
+
+/********************************************************************************************
+*                                                                                            
+* ST4NK!Ticket content management system, copyright 2005 and beyond by Digital Bluesky, LLC. 
+* Released under the BSD License,  see the LICENSE.txt file for more infomation.             
+*                                                                                            
+* Although greatly modified at this point, the origianl concepts for the basis of this       
+* code were taken from "Web Database Applications with PHP and MySQL" published by O'Reilly  
+* and Associates and authored by Hugh E. Williams and David Lane.                            
+*                                                                                            
+*/
+
+// ST4NK! Ticket Beta v0.1 - admin.catagory.php
+
+session_start();
+
+// REQUIRE VALID USER FOR PAGE ACCESS
+
+require "./includes/authentication.inc.php";
+sessionAuthenticate();
+
+// REQUIRE DB ACCESS FOR THIS PAGE
+
+require "./config.php";
+require "./includes/db.inc.php";
+
+// OPEN THE DATABASE CONNECTION
+
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+
+// DETERMINE IF USER HAS RIGHTS TO ACCESS PAGE
+
+if (isset($_SESSION["loginUsername"])) {
+$admin_handle = $_SESSION["loginUsername"];
+$query = mysql_query ("SELECT * FROM st4nkticket_helpers WHERE helper_handle = '$admin_handle'");
+$row = @mysql_fetch_array($query);
+$admin_access = $row["helper_admin_level"];
+	
+if ($admin_access > 4) {
+
+// HEADER
+
+require "./templates/admin.header.tpl";
+
+// BODY
+
+print "
+
+	<table align=center bgcolor=#FFFFFF border=0 width=1000>\n
+	<tr><td colspan=3><p><i>You are logged in as {$_SESSION["loginUsername"]} </i></p></td></tr>\n
+	<form method=POST action=admin.catagory_insert.php>
+	<tr><td colspan=3><p>Enter information for a new catagory</td></tr>\n
+	<tr>
+		<td><p>Catagory:</td>
+		<td><input type=text maxsize=50 name=catagory_name size=50></td>
+		<td></td>
+	</tr>\n
+	<tr><td colspan=3>
+		<input type=submit></form>
+		</td>
+	</tr>\n
+	<tr>
+		<td colspan=3><hr></td>
+	</tr>\n
+	</table>\n
+	";
+
+// SELECT CATAGORIES TO DELETE
+ 	
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+$result = mysql_query ("SELECT * FROM st4nkticket_catagories ORDER BY catagory_name");
+
+print "<table align=center bgcolor=#FFFFFF border=0 width=1000>\n
+		<tr>
+		<td width=100><p><b>Catagory</b></p></td>
+		<td width=100></td>
+		<td width=500></td>
+	</tr>\n";
+
+// Define your colors for the alternating rows
+
+$color1 = "#CCFFCC";
+$color2 = "#BFD8BC";
+$color_count = 0; 
+
+while ($row = mysql_fetch_array($result))
+
+	{
+
+		$row_color = ($color_count % 2) ? $color1 : $color2;
+  
+		print "<tr>";
+		print "<td bgcolor=$row_color><p> {$row["catagory_name"]}</td>\n";
+		print "<td bgcolor=$row_color><p><a class=two href=admin.catagory_delete.php?catagory_id={$row["catagory_id"]} onclick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>\n";
+		print "<td></td>";
+		print "</tr>\n";
+
+		$color_count++;
+
+	}
+
+// FOOTER
+
+require	"./templates/admin.footer.tpl";
+
+} else {
+
+header("Location: error_logout.php");
+
+exit;
+
+}
+
+}
+
+?>

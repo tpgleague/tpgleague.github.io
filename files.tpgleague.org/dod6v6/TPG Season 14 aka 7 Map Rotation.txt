@@ -1,0 +1,27 @@
+Season 14 aka 7 Map Rotation
+
+Pre-Season - 7/23/06 - dod_lennon_b3
+Pre-Season - 7/30/06 - dod_merderet
+
+Week 1 - 8/6/06 - dod_donner
+Week 2 - 8/13/06 - dod_railroad2_b2
+Week 3 - 8/20/06 - dod_anzio
+Week 4 - 8/27/06 - dod_solitude_b2
+Week 5 - 9/10/06 - dod_harrington
+Week 6 - 9/17/06 - dod_lennon_b2
+Week 7 - 9/24/06 - dod_chemille
+
+Lower Playoffs Round 1 - 10/15/06 - dod_avalanche
+Lower Playoffs Round 2 - 10/22/06 - dod_donner
+Lower Playoffs Round 3 - 10/29/06 - dod_anzio
+Lower Playoffs Round 4 - 11/5/06 - dod_harrington
+Lower Playoffs Round 5 - 11/12/06 - dod_railroad
+
+Middle Playoffs Round 1 - 10/15/06 - dod_donner
+Middle Playoffs Round 2 - 10/22/06 - dod_anzio
+Middle Playoffs Round 3 - 10/29/06 - dod_harrington
+Middle Playoffs Round 4 - 11/5/06 - dod_railroad
+
+Upper Playoffs Round 1 - 10/15/06 - dod_anzio
+Upper Playoffs Round 2 - 10/22/06 - dod_harrington
+Upper Playoffs Round 3 - 10/26/06 - dod_ralroad

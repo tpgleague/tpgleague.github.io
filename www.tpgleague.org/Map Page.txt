@@ -1,0 +1,14 @@
+Write a query to mass copy dod6 values to euro6v6 and other leagues
+Overviews: 320px × 240px
+Exploits: 640px × 400px Times New Roman
+
+
+SELECT namaps.map_title, namaps.config_path, namaps.overview_path, namaps.illegal_locations_path
+FROM tpgleague.maps namaps
+inner join tpgleague.maps euromaps on euromaps.map_title = namaps.map_title and euromaps.lid = 13
+where namaps.lid = 1;
+
+
+
+BuLLeT FoDDeR: I should link to the match that the max score occured in
+^--- create a dead team page first

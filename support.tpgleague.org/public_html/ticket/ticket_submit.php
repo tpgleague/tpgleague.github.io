@@ -1,0 +1,167 @@
+<?php
+
+/********************************************************************************************
+*                                                                                            
+* ST4NK!Ticket content management system, copyright 2005 and beyond by Digital Bluesky, LLC.                           
+* Released under the BSD License,  see the LICENSE.txt file for more infomation.             
+*                                                                                            
+* Although greatly modified at this point, the origianl concepts for the basis of this       
+* code were taken from "Web Database Applications with PHP and MySQL" published by O'Reilly  
+* and Associates and authored by Hugh E. Williams and David Lane.                            
+*                                                                                            
+*/
+
+// ST4NK! Ticket Beta v0.1 - ticket_submit.php
+
+// REQUIRE DB ACCESS FOR THIS PAGE
+
+require "./config.php";
+require "./includes/db.inc.php";
+
+// OPEN THE CONNECTION TO THE DATABASE
+
+$connection = mysql_connect($hostName, $username, $password);
+mysql_select_db($databaseName, $connection);
+
+// CREATE KEY FOR THE TICKET
+
+$random = rand();
+$string = md5($random);
+$ticket_key = $string;
+
+// TIME STAMP THE TICKET
+
+$ticket_date = date("U");
+$ticket_last_update = $ticket_date;
+
+// GET SUPPORT TICKET INFO
+
+$ticket_email = mysqlclean($_POST, "ticket_email", 50, $connection);
+$ticket_catagory = mysqlclean($_POST, "catagory_name", 50, $connection);
+$ticket_subject = mysqlclean($_POST, "ticket_subject", 255, $connection);
+$ticket_desc = mysqlclean($_POST, "ticket_desc", 4096, $connection);
+$ticket_helper = "0";
+$ticket_status = "pending";
+
+$ticket_desc = nl2br(htmlspecialchars($ticket_desc));
+
+// DOUBLE CHECK FORM TO SEE IF ALL REQUIRED VARIABLES HAVE BEEN SET, IN CASE THE USER HAS JAVASCRIPT TURNED OFF IN THEIR BROWSER
+
+if (empty($ticket_email)) { header("Location: ./error_logout.php"); exit(); }
+if (empty($ticket_catagory)) { header("Location: ./error_logout.php"); exit(); }
+if (empty($ticket_subject)) { header("Location: ./error_logout.php"); exit(); }
+if (empty($ticket_desc)) { header("Location: ./error_logout.php"); exit(); }
+
+// INSERT THE FORM DATA INTO THE TABLE
+
+$query = "INSERT INTO st4nkticket_tickets VALUES (
+						NULL,
+						'{$ticket_key}',
+						'{$ticket_date}',
+						'{$ticket_last_update}',
+						'{$ticket_email}',
+						'{$ticket_subject}',
+						'{$ticket_desc}',
+						'{$ticket_helper}',
+						'{$ticket_status}',
+						'{$ticket_catagory}',
+						'Customer'
+						)";
+  
+// START PHPMAILER ROUTINE
+
+require("./includes/class.phpmailer.php");
+
+// GET SITE SETTINGS INFORMATION
+
+$query2 = mysql_query ("SELECT * FROM st4nkticket_settings WHERE settings_id = '1'");
+$row2 = @mysql_fetch_array($query2);
+
+$admin_email = $row2["settings_admin_email"];
+$url = $row2["settings_url"];
+$smtp = $row2["settings_smtp"];
+
+// SEND EMAIL TO DEFAULT ADMINISTRATIVE ACCOUNT
+
+$mail = new PHPMailer();
+$mail->IsSMTP(); // telling the class to use SMTP
+$mail->Host = $smtp; // SMTP server
+$mail->SMTPAuth = true;     // turn on SMTP authentication
+$mail->Username = $smtpuser;  // SMTP username
+$mail->Password = $smtppass; // SMTP password
+$mail->From = $admin_email;
+$mail->FromName = $admin_email;
+$mail->AddAddress($admin_email);
+
+$mail->Subject = "A new support ticket has been submitted";
+$mail->Body = "A new support ticket has been submitted \n \n Catagory: $ticket_catagory \n Subject: $ticket_subject";
+$mail->WordWrap = 80;
+
+$return = $mail->Send();
+
+// SEND EMAIL TO THE CUSTOMER
+
+$mail = new PHPMailer();
+$mail->IsSMTP(); // telling the class to use SMTP
+$mail->Host = $smtp; // SMTP server
+$mail->SMTPAuth = true;     // turn on SMTP authentication
+$mail->Username = $smtpuser;  // SMTP username
+$mail->Password = $smtppass; // SMTP password
+$mail->From = $admin_email;
+$mail->FromName = $admin_email;
+$mail->AddAddress($ticket_email);
+
+$mail->Subject = "Support ticket confirmation";
+$mail->Body = "
+
+THIS IS AN AUTOMATED EMAIL, PLEASE DO NOT REPLY TO IT. \n
+You recently submitted a support ticket.  Here are the details of the ticket: \n
+Ticket Email: $ticket_email \n
+Ticket Key: $ticket_key \n
+Ticket Catagory: $ticket_catagory \n
+Ticket Subject: $ticket_subject \n
+Ticket Link: $url/ticket_summary.php?ticket_email=$ticket_email&ticket_key=$ticket_key
+
+";			
+
+$mail->WordWrap = 80;
+
+$return = $mail->Send();
+
+// END OF PHPMAILER ROUTINE
+
+// RETURN CONFIRMATION PAGE TO CUSTOMER
+
+// HEADER
+
+require "./templates/front.header.tpl";
+
+// BODY
+
+print	"
+	<table align=center bgcolor=#FFFFFF border=0 cellpadding=5 cellspacing=0 width=800> 
+	<tr><td colspan=2><p class=header>Support Ticket Confirmation</p></td></tr>\n 
+	<tr>
+		<td>
+		<p></p>
+		<p>Thank you, your support ticket has been successfully submitted.</p>
+		<p>Your support ticket access key is: <b>$ticket_key</b></p>
+		<p>You will need this key and the email addresss you supplied to access the status of your support ticket.</p>
+		<p>Bookmark this <a href=ticket_summary.php?ticket_email=$ticket_email&ticket_key=$ticket_key>link</a> to 
+		automatically view and check your ticket any time.</p>
+		<p></p>
+		</td>
+	</tr>\n 
+	</table>\n
+	";
+
+// END BODY
+
+// FOOTER
+
+require "./templates/front.footer.tpl";
+
+if (!(@mysql_query ($query, $connection)))
+	showerror();
+
+?>

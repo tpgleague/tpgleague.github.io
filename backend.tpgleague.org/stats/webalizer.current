@@ -1,0 +1,386 @@
+# Webalizer V2.01-10 Incremental Data - 02/02/2012 22:46:17
+2012 2 2 22 46 17
+579 304 11 76 18 12 16635798 44 30 0
+9 6 104 1 2
+254 137 2265610 6 20 10
+325 167 14370188 9 24 20
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+4 3 91933 1
+31 13 552868 2
+53 30 1001357 2
+107 44 11581758 2
+13 7 7489 2
+45 28 493324 2
+104 55 613471 6
+31 11 353268 2
+3 1 1051 2
+21 7 171021 0
+0 0 0 0
+0 0 0 0
+11 10 13043 3
+2 1 2365 1
+0 0 0 0
+3 2 2255 1
+52 36 450483 4
+6 3 6765 3
+35 22 471079 2
+2 1 2297 1
+0 0 0 0
+2 1 2297 1
+24 9 75689 6
+30 20 741985 1
+0
+0
+0
+304
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+173
+0
+0
+0
+0
+0
+0
+100
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+1
+0
+0
+0
+0
+0
+# -urls- 
+/js/tabcontent.js
+0 8 0 12417 0 0
+/
+0 42 0 89038 28 20
+/js/tiny_mce/themes/advanced/images/unlink.gif
+0 1 0 0 0 0
+/styles/tabcontent.css
+0 8 0 3150 0 0
+/js/tiny_mce/themes/advanced/images/justifycenter.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/link.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/redo.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/visualaid.gif
+0 1 0 0 0 0
+/js/prototype.js
+0 10 0 220596 0 0
+/edit.match.php
+0 4 0 42322 0 0
+/pending.approval.php
+0 7 0 24334 0 0
+/admins.php
+0 1 0 15971 0 0
+/leagues.php
+0 23 0 109066 0 0
+/js/builder.js
+0 10 0 13444 0 0
+/js/tiny_mce/themes/advanced/images/forecolor.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/langs/en.js
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/justifyleft.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/backcolor.gif
+0 1 0 0 0 0
+/js/scriptaculous.js
+0 10 0 8988 0 0
+/js/tiny_mce/themes/advanced/images/sub.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/italic.gif
+0 1 0 0 0 0
+/edit.team.php
+0 30 0 581919 0 0
+/js/tiny_mce/themes/advanced/images/justifyright.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/indent.gif
+0 1 0 0 0 0
+/js/effects.js
+0 10 0 131632 0 0
+/js/tiny_mce/themes/advanced/editor_template.js
+0 1 0 0 0 0
+/edit.matches.php
+0 5 0 413079 0 0
+/js/tiny_mce/themes/advanced/images/button_menu.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/sup.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/outdent.gif
+0 1 0 0 0 0
+/edit.schedule.php
+0 6 0 629487 0 0
+/js/tiny_mce/themes/advanced/images/hr.gif
+0 1 0 0 0 0
+/js/report.match.sides.js
+0 2 0 1292 0 0
+/js/tiny_mce/themes/advanced/images/cleanup.gif
+0 1 0 0 0 0
+/view.match.proposals.php
+0 1 0 4854 0 0
+/styles/layout.css
+0 17 0 185 0 0
+/js/tiny_mce/themes/advanced/images/help.gif
+0 1 0 0 0 0
+/js/tiny_mce/tiny_mce.js
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/undo.gif
+0 1 0 0 0 0
+/edit.user.php
+0 15 0 2676663 0 0
+/js/tiny_mce/themes/advanced/images/code.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/image.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/separator.gif
+0 1 0 0 0 0
+/styles/forms.css
+0 17 0 6305 0 0
+/styles/edit.user.css
+0 8 0 1902 0 0
+/news.php
+0 3 0 32534 0 0
+/styles/table.css
+0 17 0 3135 0 0
+/js/submit.once.js
+0 17 0 2700 0 0
+/js/tiny_mce/themes/advanced/images/underline.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/strikethrough.gif
+0 1 0 0 0 0
+/edit.admin.php
+0 2 0 9512352 0 0
+/js/tiny_mce/themes/advanced/images/bold.gif
+0 1 0 0 0 0
+/styles/style.css
+0 17 0 2245 0 0
+/js/controls.js
+0 10 0 112144 0 0
+/js/tiny_mce/themes/advanced/images/statusbar_resize.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/css/editor_content.css
+0 1 0 0 0 0
+/js/slider.js
+0 10 0 43160 0 0
+/js/tiny_mce/themes/advanced/images/bullist.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/numlist.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/charmap.gif
+0 1 0 0 0 0
+/edit.season.php
+0 3 0 76199 0 0
+/js/tiny_mce/themes/advanced/images/removeformat.gif
+0 1 0 0 0 0
+/js/tiny_mce/langs/en.js
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/css/editor_ui.css
+0 1 0 0 0 0
+/styles/news.css
+0 1 0 0 0 0
+/icons/apache_pb.gif
+0 1 0 0 0 0
+/js/dragdrop.js
+0 10 0 118468 0 0
+/teams.manager.php
+0 26 0 1353123 0 0
+/styles/teams.manager.css
+0 10 0 12044 0 0
+/js/tiny_mce/blank.htm
+0 1 0 0 1 0
+/styles/manage.roster.css
+0 9 0 486 0 0
+/edit.league.php
+0 25 0 180225 0 0
+/member.search.php
+0 40 0 200302 0 0
+/styles/member.search.css
+0 3 0 0 0 0
+/js/tiny_mce/themes/advanced/images/justifyfull.gif
+0 1 0 0 0 0
+/js/tiny_mce/themes/advanced/images/anchor.gif
+0 1 0 0 0 0
+# End Of Table - urls
+# -sites- (monthly)
+189.60.38.16
+0 94 54 1337593 7 1328185664
+/
+180.76.6.222
+0 1 1 1051 1 1328149197
+/
+188.138.112.171
+0 1 0 0 1 1328170084
+-
+194.153.113.7
+0 2 2 1051 1 1328186864
+/
+69.115.71.236
+0 55 42 1291886 2 1328148793
+/
+69.28.58.70
+0 2 1 1051 1 1328171795
+/
+71.167.31.134
+0 7 5 79223 1 1328166431
+/
+108.52.129.105
+0 315 133 12986402 6 1328222775
+/
+107.21.67.200
+0 1 1 0 0 0
+-
+186.215.222.26
+0 100 64 937541 9 1328207176
+/
+50.17.110.188
+0 1 1 0 1 1328113885
+/
+# End Of Table - sites (monthly)
+# -sites- (daily)
+189.60.38.16
+0 74 45 1261895 5 1328185664
+/
+180.76.6.222
+0 1 1 1051 1 1328149197
+/
+188.138.112.171
+0 1 0 0 1 1328170084
+-
+194.153.113.7
+0 2 2 1051 1 1328186864
+/
+69.115.71.236
+0 25 22 549901 1 1328148793
+/
+69.28.58.70
+0 2 1 1051 1 1328171795
+/
+71.167.31.134
+0 7 5 79223 1 1328166431
+/
+108.52.129.105
+0 165 60 11993045 5 1328222775
+/
+186.215.222.26
+0 48 31 482971 4 1328207176
+/
+# End Of Table - sites (daily)
+# -referrers- 
+- (Direct Request)
+0 103
+http://backend.tpgleague.org/edit.team.php
+0 34
+http://backend.tpgleague.org/leagues.php
+0 28
+http://backend.tpgleague.org/edit.matches.php
+0 6
+http://backend.tpgleague.org/pending.approval.php
+0 6
+http://backend.tpgleague.org/js/tiny_mce/blank.htm
+0 1
+http://backend.tpgleague.org/edit.user.php
+0 53
+http://backend.tpgleague.org/edit.admin.php
+0 1
+http://backend.tpgleague.org/teams.manager.php
+0 105
+http://backend.tpgleague.org/styles/forms.css
+0 10
+http://backend.tpgleague.org/edit.season.php
+0 3
+http://backend.tpgleague.org/member.search.php
+0 43
+http://backend.tpgleague.org/admins.php
+0 1
+http://backend.tpgleague.org/edit.league.php
+0 40
+http://backend.tpgleague.org/edit.match.php
+0 4
+http://backend.tpgleague.org/
+0 91
+http://backend.tpgleague.org/edit.schedule.php
+0 9
+http://backend.tpgleague.org/news.php
+0 41
+# End Of Table - referrers
+# -agents- 
+Opera/9.80 (Android 2.3.4; Linux; Opera Mobi/ADR-1201301505; 
+0 7
+Mozilla/5.0 (Windows NT 5.1; rv:9.0) Gecko/20100101 Firefox/9
+0 7
+Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.
+0 315
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like G
+0 61
+Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.c
+0 1
+Opera/9.80 (Android 2.3.4; Linux; Opera Mobi/ADR-1202011015; 
+0 26
+Mozilla/5.0 (compatible; oBot/2.3.1; +http://filterdb.iss.net
+0 2
+Mozilla/5.0 (Windows NT 6.1; rv:9.0.1) Gecko/20100101 Firefox
+0 55
+Mozilla/5.0 (Windows NT 6.1; WOW64; rv:2.0.1) Gecko/20100101 
+0 1
+Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.7 (KHTML, like G
+0 100
+nutch-1.4/Nutch-1.4
+0 2
+Mozilla/5.0 (compatible; NetcraftSurveyAgent/1.0; +info@netcr
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

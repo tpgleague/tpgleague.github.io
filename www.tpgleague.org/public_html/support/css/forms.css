@@ -1,0 +1,79 @@
+label,input {
+	display: block;
+  width: 225px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+label {
+	text-align: right;
+	padding-right: 20px;
+}
+
+br {
+	clear: left;
+}
+
+form div {
+  clear: left;
+  display: block;
+  width: 600px;
+  height: 1%;
+  margin: 5px 0px 0px 0px;
+  padding: 1px 3px;
+}
+
+
+form fieldset div .small_note {
+  display: block;
+  margin: 0px 0px 5px 247px;
+  padding: 1px 0px;
+  font-size: 88%;
+  height: 1%;
+}
+
+form div.error {
+  background-color: #ffffe1;
+  background-image: url(/images/required_bg.gif);
+  background-repeat: no-repeat;
+  background-position: top left;
+  color: #666666;
+  border: 1px solid #ff0000;
+}
+
+form div.error p.error {
+  background-image: url(/images/icon_error.gif);
+  background-position: top left;
+  background-color: transparent;
+  border-style: none;
+  font-size: 88%;
+  font-weight: bold;
+  margin: 0px 0px 0px 118px;
+/*  width: 200px; */
+  width: auto;
+  color: #ff0000;
+}
+
+form div small {
+  display: block;
+  margin: 0px 0px 5px 247px;
+  padding: 1px 3px;
+  font-size: 88%;
+  height: 1%;
+}
+
+form div .small_note {
+  display: block;
+  margin: 0px 0px 5px 247px;
+  padding: 1px 0px;
+  font-size: 88%;
+  height: 1%;
+}
+
+form div.notes p, form div small {
+  line-height: 125%;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}

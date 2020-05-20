@@ -1,0 +1,5 @@
+ST4NK! Ticket
+Copyright (c) 2005, Digital Bluesky, LLC
+Released under the BSD License, see the LICENSE.txt file for more information
+
+This is release is: Beta 0.1

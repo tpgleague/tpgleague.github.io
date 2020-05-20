@@ -1,0 +1,8 @@
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+if (($_SERVER['REMOTE_ADDR'] !== '24.239.122.53') && ($_SERVER['REMOTE_ADDR'] !== '174.51.65.194')) {
+exit;
+}                        <-- in init file
+
+108.52.129.105
